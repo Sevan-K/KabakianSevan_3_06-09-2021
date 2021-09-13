@@ -1,0 +1,8 @@
+.footer{
+    // couleur à changer lorsque la fonction et les variables seront crée
+    background: #131212;
+    color: white;
+    &__link{
+        color: inherit;
+    }
+}

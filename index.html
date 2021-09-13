@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ohmyfood - Réservez le menu qui vous convient</title>
+    <!-- link to css styling file -->
     <link rel="stylesheet" href="./public/css/style.css" />
     <!-- to be able to use fontawesome icons -->
     <script
@@ -29,6 +30,7 @@
           name="localisation-research"
           id="localisation-research"
           class="form__research"
+          value="Paris, Belleville"
         />
         <h1 class="form__heading">Réserver le menu qui vous convient</h1>
         <p class="form__text">
@@ -41,27 +43,82 @@
         <ul>
           <li class="step">
             <aside class="step__aside">1</aside>
-            <p class="step__text">
-              Choisissez un restaurant
-            </p>
+            <p class="step__text">Choisissez un restaurant</p>
           </li>
           <li class="step">
             <aside class="step__text">2</aside>
-            <p class="step__p">
-              Composez votre menu
-            </p>
+            <p class="step__p">Composez votre menu</p>
           </li>
           <li class="step">
             <aside class="step__aside">3</aside>
-            <p class="step__text">
-              Dégustez au restaurant
-            </p>
+            <p class="step__text">Dégustez au restaurant</p>
           </li>
         </ul>
       </section>
       <main class="main">
         <h2 class="main__heading">Restaurants</h2>
+        <a href="#" class="main__link">
+          <article class="card card--restorent">
+            <p class="card__img card__img--new">
+              <img
+                src="./public/images/restaurants/palette.jpg"
+                alt="La palette du goût"
+              />
+            </p>
+            <h3 class="card__heading">La palette du goût</h3>
+            <p class="card__text">Ménilmontant</p>
+            <aside class="card__aside"></aside>
+          </article>
+        </a>
+        <a href="#" class="main__link">
+          <article class="card card--restorent">
+            <p class="card__img card__img--new">
+              <img
+                src="./public/images/restaurants/enchantee.jpg"
+                alt="La palette du goût"
+              />
+            </p>
+            <h3 class="card__heading">La note enchanté<em></em></h3>
+            <p class="card__text">Charonne</p>
+            <aside class="card__aside"></aside>
+          </article>
+        </a>
+        <a href="#" class="main__link">
+          <article class="card card--restorent">
+            <p class="card__img">
+              <img
+                src="./public/images/restaurants/française.jpg"
+                alt="La palette du goût"
+              />
+            </p>
+            <h3 class="card__heading">A la française</h3>
+            <p class="card__text">Cité Rouge</p>
+            <aside class="card__aside"></aside>
+          </article>
+        </a>
+        <a href="#" class="main__link">
+          <article class="card card--restorent">
+            <p class="card__img">
+              <img
+                src="./public/images/restaurants/sens.jpg"
+                alt="La palette du goût"
+              />
+            </p>
+            <h3 class="card__heading">Le délice des sens</h3>
+            <p class="card__text">Folie-Méricourt</p>
+            <aside class="card__aside"></aside>
+          </article>
+        </a>
       </main>
+      <footer class="footer">
+        <p class="footer__heading">ohmyfood</p>
+        <ul>
+          <li><a class="footer__link" href="#">Proposer un restaurant</a></li>
+          <li><a class="footer__link" href="#">Devenir partenaire</a></li>
+          <li><a class="footer__link" href="#">Mentions légales</a></li>
+          <li><a class="footer__link" href="mailto:contact@ohmyfood.com">Contact</a></li>
+        </ul>
+      </footer>
     </div>
   </body>
 </html>

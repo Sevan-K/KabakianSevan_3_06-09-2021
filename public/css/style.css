@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 *,
 *::after,
 *::before {
@@ -8,10 +9,39 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
   box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.card__img img {
+  width: 100%;
+  object-fit: cover;
+}
+.card__img--new::after {
+  content: "Nouveau";
+  color: tomato;
+}
+
+.footer {
+  background: #131212;
+  color: white;
+}
+.footer__link {
+  color: inherit;
 }
 
 /*# sourceMappingURL=style.css.map */
