@@ -5,14 +5,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ohmyfood - Réservez le menu qui vous convient</title>
-    <link rel="stylesheet" href="./public/css/style.css">
+    <link rel="stylesheet" href="./public/css/style.css" />
+    <!-- to be able to use fontawesome icons -->
+    <script
+      src="https://kit.fontawesome.com/be8e39ade2.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum cupiditate,
-      ea neque eum libero dolorum perferendis soluta, fugiat nostrum
-      voluptatibus molestiae, sint mollitia culpa at consequuntur quaerat!
-      Voluptates, aliquam sed?
-    </p>
+    <!-- div containging the whole page if needed -->
+    <div class="main_wrapper">
+      <!-- homepage header -->
+      <header class="header">
+        <p class="header__logo">
+          <img src="./public/images/logo/ohmyfood.png" alt="Logo ohmyfood" />
+        </p>
+      </header>
+      <!-- part to explore restaurents, since it is not functionnal action and method are not spécified yet now -->
+      <form class="explorer">
+        <label class="form__label" for="localisation-research"></label>
+        <input
+          type="search"
+          name="localisation-research"
+          id="localisation-research"
+          class="form__research"
+        />
+        <h1 class="form__heading">Réserver le menu qui vous convient</h1>
+        <p class="form__text">
+          Découvrez des restaurants d'exeption sélectionnés par nos soins.
+        </p>
+        <button class="form__btn submit-btn">Explorez nos restaurants</button>
+      </form>
+      <section class="how2do">
+        <h2>Fonctionnement</h2>
+        <ul>
+          <li class="step">
+            <aside class="step__aside">1</aside>
+            <p class="step__text">
+              Choisissez un restaurant
+            </p>
+          </li>
+          <li class="step">
+            <aside class="step__text">2</aside>
+            <p class="step__p">
+              Composez votre menu
+            </p>
+          </li>
+          <li class="step">
+            <aside class="step__aside">3</aside>
+            <p class="step__text">
+              Dégustez au restaurant
+            </p>
+          </li>
+        </ul>
+      </section>
+      <main class="main">
+        <h2 class="main__heading">Restaurants</h2>
+      </main>
+    </div>
   </body>
 </html>
