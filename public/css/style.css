@@ -27,6 +27,28 @@ body {
   font-weight: 300;
 }
 
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__logo {
+  width: 100%;
+  text-align: center;
+}
+.header__link {
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  padding: 1rem;
+}
+.header__link::before {
+  content: "\f060";
+  font-family: "Font Awesome 5 Free";
+  font-weight: bold;
+  color: black;
+}
+
 .card__img img {
   width: 100%;
   object-fit: cover;

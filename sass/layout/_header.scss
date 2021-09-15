@@ -1,0 +1,23 @@
+.header {
+  // faire une mixin avec le displayflex
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__logo {
+    width: 100%;
+    text-align: center;
+  }
+  &__link {
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    // utiliser une variable pour le padding
+    padding: 1rem;
+    &::before {
+      content: "\f060";
+      font-family: "Font Awesome 5 Free";
+      font-weight: bold;
+      color: black;
+    }
+  }
+}
