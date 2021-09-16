@@ -9,7 +9,7 @@
     }
     &--new::after {
       content: "Nouveau";
-      color: tomato;
+      color: $color-tertiary;
     }
   }
 }

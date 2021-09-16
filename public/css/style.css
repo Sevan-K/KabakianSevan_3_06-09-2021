@@ -33,8 +33,11 @@ body {
   align-items: center;
 }
 .header__logo {
-  width: 100%;
+  flex: 1;
   text-align: center;
+}
+.header__logo img {
+  width: 50%;
 }
 .header__link {
   position: absolute;
@@ -46,7 +49,7 @@ body {
   content: "\f060";
   font-family: "Font Awesome 5 Free";
   font-weight: bold;
-  color: black;
+  color: #000;
 }
 
 .card__img img {
@@ -55,11 +58,11 @@ body {
 }
 .card__img--new::after {
   content: "Nouveau";
-  color: tomato;
+  color: #99e2d0;
 }
 
 .footer {
-  background: #131212;
+  background: #404040;
   color: white;
 }
 .footer__link {

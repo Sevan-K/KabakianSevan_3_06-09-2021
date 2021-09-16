@@ -1,5 +1,11 @@
+// imports from utils
+@import "./utils/variables";
+// imports from base
 @import "./base/base";
 @import "./base/typo";
+// imports from components
+// imports from layout
 @import "./layout/header";
 @import "./layout/card";
 @import "./layout/footer";
+// imports from pages

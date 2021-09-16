@@ -1,0 +1,12 @@
+// colors definition
+$color-primary: #9356dc;
+$color-secondary: #ff79da;
+$color-tertiary: #99e2d0;
+$color-text: #000;
+
+// map for background lightening to be used un a mixin with a function for text color
+$bg_lighten: (
+  lighter: 70%,
+  light: 50%,
+  dark: 25%,
+);

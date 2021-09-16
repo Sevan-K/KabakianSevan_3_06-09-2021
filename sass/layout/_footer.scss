@@ -1,6 +1,6 @@
 .footer{
     // couleur à changer lorsque la fonction et les variables seront crée
-    background: #131212;
+    background: lighten($color: $color-text , $amount: 25%);
     color: white;
     &__link{
         color: inherit;
