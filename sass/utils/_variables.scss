@@ -2,11 +2,18 @@
 $color-primary: #9356dc;
 $color-secondary: #ff79da;
 $color-tertiary: #99e2d0;
-$color-text: #000;
+$color-text: #000000;
+
+// padding dimensions storage
+// $padding-unit:1rem; to be uses later when all padding are defined
+$padding-dimensions: (
+  section: 4rem 2rem,
+  button: 1rem .5rem
+);
 
 // map for background lightening to be used un a mixin with a function for text color
 $bg_lighten: (
-  lighter: 70%,
-  light: 50%,
-  dark: 25%,
+  lighter: 95%,
+  light: 90%,
+  dark: 20%,
 );

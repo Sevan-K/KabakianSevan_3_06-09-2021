@@ -1,5 +1,7 @@
 // imports from utils
 @import "./utils/variables";
+@import "./utils/functions";
+@import "./utils/mixins";
 // imports from base
 @import "./base/base";
 @import "./base/typo";
@@ -7,5 +9,6 @@
 // imports from layout
 @import "./layout/header";
 @import "./layout/card";
+@import "./layout/main-section";
 @import "./layout/footer";
 // imports from pages

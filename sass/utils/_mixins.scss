@@ -1,0 +1,10 @@
+// mixin to determine backgound color and text color of a block
+@mixin bg-text-color($bg-type: lighter) {
+  $bg-color: change-bg-color($bg-type);
+  background: $bg-color;
+  color: change-color-text($bg-color);
+}
+// mixin for adding padding to an element
+@mixin set-padding($bloc-type) {
+  padding: map-get($map: $padding-dimensions, $key: $bloc-type);
+}

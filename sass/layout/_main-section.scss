@@ -1,0 +1,4 @@
+.main-section{
+    @include bg-text-color(lighter);
+    @include set-padding(section);
+}

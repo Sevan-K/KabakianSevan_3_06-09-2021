@@ -1,8 +1,10 @@
-.footer{
-    // couleur à changer lorsque la fonction et les variables seront crée
-    background: lighten($color: $color-text , $amount: 25%);
-    color: white;
-    &__link{
-        color: inherit;
-    }
+.footer {
+  // couleur à changer lorsque la fonction et les variables seront crée
+  @include bg-text-color(dark);
+  &__heading{
+      font-family: 'Shrikhand',sans-serif;
+  }
+  &__link {
+    color: inherit;
+  }
 }
