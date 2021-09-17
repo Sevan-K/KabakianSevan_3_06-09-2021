@@ -46,15 +46,18 @@ body {
   left: 1.6rem;
   background: #9356dc;
   color: white;
+  z-index: 2;
 }
 .step__text {
+  display: flex;
   width: 80%;
-  text-align: center;
   background: #f2f2f2;
   color: #000000;
   line-height: 8rem;
   border-radius: 2rem;
-  transition: background 200ms;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
 }
 .step__text--phone::before {
   content: "\f3cd";
@@ -65,19 +68,32 @@ body {
 .step__text--store::before {
   content: "\f54e";
 }
-.step__text::before {
-  font-family: "Font Awesome 5 Free";
-  font-weight: bold;
-  position: absolute;
-  left: 25%;
-  color: gray;
-  transition: color 200ms;
+.step__text > p {
+  flex: 1 1 70%;
 }
-.step:hover > .step__text {
+.step__text::after {
+  content: "";
   background: #f2eafb;
   color: #000000;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
 }
-.step:hover > .step__text::before {
+.step__text::before {
+  flex: 1 1 30%;
+  text-align: center;
+  font-family: "Font Awesome 5 Free";
+  font-weight: bold;
+  color: gray;
+}
+.step__text:hover::after {
+  opacity: 1;
+}
+.step__text:hover::before {
   color: #9356dc;
 }
 
