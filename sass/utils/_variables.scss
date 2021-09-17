@@ -8,12 +8,31 @@ $color-text: #000000;
 // $padding-unit:1rem; to be uses later when all padding are defined
 $padding-dimensions: (
   section: 4rem 2rem,
-  button: 1rem .5rem
+  button: 1rem 0.5rem,
 );
 
 // map for background lightening to be used un a mixin with a function for text color
-$bg_lighten: (
-  lighter: 95%,
-  light: 90%,
-  dark: 20%,
+$bg-color-styles: (
+  color-text-lighter: (
+    color: $color-text,
+    lighten: 95%,
+  ),
+  color-text-light: (
+    color: $color-text,
+    lighten: 90%,
+  ),
+  color-text-dark: (
+    color: $color-text,
+    lighten: 20%,
+  ),
+  color-primary-light: (
+    color: $color-primary,
+    lighten: 35%,
+  ),
+);
+
+$step-before-content: (
+  phone: "\f3cd",
+  list: "\f03a",
+  store: "\f54e",
 );

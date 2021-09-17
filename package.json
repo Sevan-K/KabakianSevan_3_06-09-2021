@@ -4,7 +4,8 @@
   "description": "omyfood website styling",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"  },
+     "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/",
+     "sass": "sass --watch ./sass/main.scss:./public/css/style.css"  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Sevan-K/KabakianSevan_3_06-09-2021.git"
@@ -14,5 +15,6 @@
   "bugs": {
     "url": "https://github.com/Sevan-K/KabakianSevan_3_06-09-2021/issues"
   },
-  "homepage": "https://github.com/Sevan-K/KabakianSevan_3_06-09-2021#readme"
+  "homepage": "https://github.com/Sevan-K/KabakianSevan_3_06-09-2021#readme",
+  "browserslist": "last 4 versions"
 }

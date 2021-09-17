@@ -18,6 +18,9 @@ body {
 // removing default ancre styling
 a{
   text-decoration: none;
-  // à modifier quand la fonction de couleur du texte sera créée
-  color: #000;
+  color: $color-text;
+}
+// setting ul list style
+ul{
+  list-style: none;
 }
