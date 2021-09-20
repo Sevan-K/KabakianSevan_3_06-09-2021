@@ -1,8 +1,10 @@
 // colors definition
-$color-primary: #9356dc;
-$color-secondary: #ff79da;
-$color-tertiary: #99e2d0;
+$color-primary: hsl(267, 66%, 60%);
+$color-secondary: hsl(317, 100%, 74%);
+$color-tertiary: hsl(165, 56%, 74%);
 $color-text: #000000;
+// variable pour la taille du aside des steps
+$step__aside-size:2.5rem;
 
 // padding dimensions storage
 // $padding-unit:1rem; to be uses later when all padding are defined
@@ -29,6 +31,10 @@ $bg-color-styles: (
     color: $color-primary,
     lighten: 35%,
   ),
+  color-primary: (
+    color: $color-primary,
+    lighten: 0%,
+  )
 );
 
 $step-before-content: (

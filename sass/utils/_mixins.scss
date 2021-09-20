@@ -8,13 +8,18 @@
 @mixin set-padding($bloc-type) {
   padding: map-get($map: $padding-dimensions, $key: $bloc-type);
 }
-
+// mixin for changing step__text's before content
 @mixin step-before-content {
   @each $type, $content in $step-before-content {
     &--#{$type}::before {
       content: $content;
     }
   }
+}
+// mixin for font awesome content définition
+@mixin fontawesome ($font-weight:bold) {
+  font-family: "Font Awesome 5 Free";
+  font-weight: $font-weight;
 }
 
 // mixin felx ??
