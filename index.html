@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ohmyfood - Réservez le menu qui vous convient</title>
     <!-- link to css styling file -->
-    <!-- <link rel="stylesheet" href="./public/css/style.css" /> -->
-    <link rel="stylesheet" href="./public/css/prefixed/style.css">
+    <link rel="stylesheet" href="./public/css/style.css" />
+    <!-- <link rel="stylesheet" href="./public/css/prefixed/style.css"> -->
     <!-- to be able to use fontawesome icons -->
     <script
       src="https://kit.fontawesome.com/be8e39ade2.js"
@@ -25,19 +25,25 @@
       </header>
       <!-- part to explore restaurents, since it is not functionnal action and method are not spécified yet now -->
       <form class="explorer">
-        <label class="form__label" for="localisation-research"></label>
-        <input
-          type="search"
-          name="localisation-research"
-          id="localisation-research"
-          class="form__research"
-          value="Paris, Belleville"
-        />
-        <h1 class="form__heading">Réserver le menu qui vous convient</h1>
-        <p class="form__text">
-          Découvrez des restaurants d'exeption sélectionnés par nos soins.
-        </p>
-        <button class="form__btn submit-btn">Explorez nos restaurants</button>
+        <fieldset class="fieldset fieldset--light">
+          <label class="fieldset__label" for="localisation-research"></label>
+          <input
+            class="fieldset__input"
+            type="search"
+            name="localisation-research"
+            id="localisation-research"
+            value="Paris, Belleville"
+          />
+        </fieldset>
+        <fieldset class="fieldset fieldset--lighter">
+          <h1 class="fieldset__heading">Réserver le menu qui vous convient</h1>
+          <p class="fieldset__text">
+            Découvrez des restaurants d'exeption sélectionnés par nos soins.
+          </p>
+          <button class="fieldset__btn submit-btn">
+            Explorez nos restaurants
+          </button>
+        </fieldset>
       </form>
       <!-- section with the steps to follow -->
       <section class="how2do">
@@ -67,8 +73,8 @@
       <main class="main-section">
         <h2 class="main-section__heading">Restaurants</h2>
         <a href="lapalettedugout.html" class="main-section__link">
-          <article class="card card--restaurent">
-            <p class="card__img card__img--new">
+          <article class="card card--restaurent card--new">
+            <p class="card__img">
               <img
                 src="./public/images/restaurants/palette.jpg"
                 alt="La palette du goût"
@@ -80,8 +86,8 @@
           </article>
         </a>
         <a href="lanoteenchantee.html" class="main-section__link">
-          <article class="card card--restaurent">
-            <p class="card__img card__img--new">
+          <article class="card card--restaurent card--new">
+            <p class="card__img">
               <img
                 src="./public/images/restaurants/enchantee.jpg"
                 alt="La palette du goût"

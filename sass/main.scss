@@ -7,10 +7,11 @@
 @import "./base/typo";
 // imports from components
 @import "./components/step";
+@import "./components/card"; 
 // imports from layout
 @import "./layout/header";
+@import "./layout/explorer";
 @import "./layout/how2do";
-@import "./layout/card";
 @import "./layout/main-section";
 @import "./layout/footer";
 // imports from pages

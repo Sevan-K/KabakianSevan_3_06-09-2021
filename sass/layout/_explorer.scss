@@ -1,0 +1,54 @@
+// layout of the form
+.explorer {
+  text-align: center;
+}
+// layout of the filedsets
+.fieldset {
+  border: none;
+  &--light {
+    @include bg-text-color(color-text-light);
+  }
+  &--lighter {
+    @include bg-text-color(color-text-lighter);
+    @include set-padding(section);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__label {
+    &::before {
+      content: "\f3c5";
+      @include fontawesome(bold);
+    }
+  }
+  &__input {
+    // @include bg-text-color(color-text-light);
+    // width: 100%;
+    border: none;
+    background: none;
+    line-height: 5rem;
+  }
+  &:focus-within {
+    @include bg-text-color(color-primary-light);
+    > .fieldset__label{
+        color: $color-primary;
+    }
+  }
+  &__heading{
+      margin-bottom: 1rem;
+  }
+  &__btn {
+      margin-top: 2rem;
+    //   partie à placer dans un composant (et une mixin?)
+    border: none;
+    background: linear-gradient(
+      0deg,
+      $color-primary 0%,
+      $color-secondary 100%
+    );
+    color: lighten($color-text,100%);
+    @include set-padding(button);
+    // regrouper dans une mixin + map
+    border-radius: 5rem;
+  }
+}

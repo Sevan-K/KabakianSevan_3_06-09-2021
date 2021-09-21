@@ -11,7 +11,7 @@
       "heading aside"
       "txt aside";
   }
-  &::before {
+  &--new::before {
     grid-area: img;
     justify-self: right;
     position: relative;
@@ -64,8 +64,8 @@
       @include position_absolute;
       background: linear-gradient(
         0deg,
-        rgba(255, 122, 217, 1) 0%,
-        rgba(146, 86, 220, 1) 100%
+        $color-secondary 0%,
+        $color-primary 100%
       );
       background-clip: text;
       -webkit-background-clip: text;
