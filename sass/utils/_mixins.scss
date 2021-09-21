@@ -17,9 +17,16 @@
   }
 }
 // mixin for font awesome content définition
-@mixin fontawesome ($font-weight:bold) {
+@mixin fontawesome($font-weight: bold) {
   font-family: "Font Awesome 5 Free";
   font-weight: $font-weight;
 }
 
+@mixin position_absolute {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
 // mixin felx ??

@@ -5,7 +5,7 @@
   &--restaurent {
     display: grid;
     grid-template-columns: 1fr 8rem;
-    grid-template-rows: clamp(7rem,7rem + 25vw,27rem) repeat(2, 1fr);
+    grid-template-rows: clamp(7rem, 7rem + 25vw, 27rem) repeat(2, 1fr);
     grid-template-areas:
       "img img"
       "heading aside"
@@ -45,11 +45,41 @@
     grid-area: aside;
     align-self: center;
     justify-self: center;
+    position: relative;
     &::before {
       content: "\f004";
-      @include fontawesome(none);
+      @include fontawesome(normal);
       // a inclure dans la palette de typo
-      font-size: 3rem;
+      font-size: map-get($icons-size, cards);
+      opacity: 1;
+      // faire une mixin couplée à une map ?
+      transition: opacity $transition-duration;
+    }
+    &::after {
+      content: "\f004";
+      font-family: "Font Awesome 5 Free";
+      font-weight: bold;
+      // a inclure dans la palette de typo
+      font-size: map-get($icons-size, cards);
+      @include position_absolute;
+      background: linear-gradient(
+        0deg,
+        rgba(255, 122, 217, 1) 0%,
+        rgba(146, 86, 220, 1) 100%
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      opacity: 0;
+      transition: opacity $transition-duration;
+    }
+    &:hover {
+      &::before {
+        opacity: 0;
+      }
+      &::after {
+        opacity: 1;
+      }
     }
   }
 }

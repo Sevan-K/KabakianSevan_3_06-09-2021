@@ -4,7 +4,13 @@ $color-secondary: hsl(317, 100%, 74%);
 $color-tertiary: hsl(165, 56%, 74%);
 $color-text: #000000;
 // variable pour la taille du aside des steps
-$step__aside-size:2.5rem;
+$step__aside-size: 2.5rem;
+
+$icons-size: (
+  steps: 2rem,
+  cards: 3rem,
+);
+$transition-duration: 300ms;
 
 // padding dimensions storage
 // $padding-unit:1rem; to be uses later when all padding are defined
@@ -34,7 +40,7 @@ $bg-color-styles: (
   color-primary: (
     color: $color-primary,
     lighten: 0%,
-  )
+  ),
 );
 
 $step-before-content: (

@@ -25,23 +25,19 @@
     overflow: hidden;
     position: relative;
     z-index: 1;
-     @include step-before-content;
+    @include step-before-content;
     //  a définir plus globalement dans la typo !!
-     font-size: 1.3rem;
-   & > p {
+    font-size: map-get($icons-size, steps);
+    & > p {
       flex: 1 1 70%;
     }
     &::after {
       content: "";
       @include bg-text-color(color-primary-light);
       // mixin pour position absolute
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      opacity: 0;
+      @include position_absolute;
       z-index: -1;
+      opacity: 0;
     }
     &::before {
       flex: 1 1 30%;

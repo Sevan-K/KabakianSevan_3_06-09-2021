@@ -62,7 +62,7 @@ body {
   overflow: hidden;
   position: relative;
   z-index: 1;
-  font-size: 1.3rem;
+  font-size: 2rem;
 }
 .step__text--phone::before {
   content: "\f3cd";
@@ -85,8 +85,8 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  opacity: 0;
   z-index: -1;
+  opacity: 0;
 }
 .step__text::before {
   flex: 1 1 30%;
@@ -139,7 +139,7 @@ body {
 .card--restaurent {
   display: grid;
   grid-template-columns: 1fr 8rem;
-  grid-template-rows: clamp(7rem,7rem + 25vw,27rem) repeat(2, 1fr);
+  grid-template-rows: clamp(7rem, 7rem + 25vw, 27rem) repeat(2, 1fr);
   grid-template-areas: "img img" "heading aside" "txt aside";
 }
 .card::before {
@@ -176,12 +176,38 @@ body {
   grid-area: aside;
   align-self: center;
   justify-self: center;
+  position: relative;
 }
 .card__aside::before {
   content: "\f004";
   font-family: "Font Awesome 5 Free";
-  font-weight: none;
+  font-weight: normal;
   font-size: 3rem;
+  opacity: 1;
+  transition: opacity 300ms;
+}
+.card__aside::after {
+  content: "\f004";
+  font-family: "Font Awesome 5 Free";
+  font-weight: bold;
+  font-size: 3rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(0deg, #ff7ad9 0%, #9256dc 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  opacity: 0;
+  transition: opacity 300ms;
+}
+.card__aside:hover::before {
+  opacity: 0;
+}
+.card__aside:hover::after {
+  opacity: 1;
 }
 
 .main-section {
