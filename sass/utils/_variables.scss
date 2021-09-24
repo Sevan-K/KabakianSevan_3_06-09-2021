@@ -1,7 +1,7 @@
 // colors definition
-$color-primary: hsl(267, 66%, 60%);
-$color-secondary: hsl(317, 100%, 74%);
-$color-tertiary: hsl(165, 56%, 74%);
+$color-primary: #9256dc;
+$color-secondary: #ff7ad9;
+$color-tertiary: #98e2cf;
 $color-text: #000000;
 // variable pour la taille du aside des steps
 $step__aside-size: 2.5rem;
@@ -36,6 +36,10 @@ $bg-color-styles: (
   color-primary-light: (
     color: $color-primary,
     lighten: 35%,
+  ),
+  color-primary-lighter: (
+    color: $color-primary,
+    lighten: 38%,
   ),
   color-primary: (
     color: $color-primary,
