@@ -313,6 +313,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1rem 0;
+}
+.header--shadow {
+  position: relative;
+  box-shadow: 0 0 1rem #b3b3b3;
 }
 .header__logo {
   flex: 1;
@@ -398,12 +403,30 @@ body {
 .footer {
   background: #333333;
   color: white;
+  padding: 2rem 2rem;
 }
 .footer__heading {
   font-family: "Shrikhand", sans-serif;
+  margin-bottom: 1rem;
+}
+.footer li {
+  margin-bottom: 0.5rem;
 }
 .footer__link {
   color: inherit;
+}
+.footer__link--utensils::before {
+  content: "\f2e7";
+}
+.footer__link--handshake::before {
+  content: "\f4c4";
+}
+.footer__link--icon::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: bold;
+}
+.footer__link:hover {
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=style.css.map */

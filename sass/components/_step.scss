@@ -25,7 +25,7 @@
     overflow: hidden;
     position: relative;
     z-index: 1;
-    @include step-before-content;
+    @include before-content($step-before-content);
     //  a définir plus globalement dans la typo !!
     font-size: map-get($icons-size, steps);
     & > p {

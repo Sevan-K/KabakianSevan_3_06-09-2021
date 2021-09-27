@@ -1,10 +1,23 @@
 .footer {
-  // couleur à changer lorsque la fonction et les variables seront crée
   @include bg-text-color(color-text-dark);
-  &__heading{
-      font-family: 'Shrikhand',sans-serif;
+  @include set-padding(footer);
+  &__heading {
+    font-family: "Shrikhand", sans-serif;
+    margin-bottom: 1rem;
+  }
+  li {
+    margin-bottom: 0.5rem;
   }
   &__link {
     color: inherit;
+    // position: relative;
+    @include before-content($footer__link-before-content);
+    &--icon::before {
+      @include fontawesome;
+      // position: absolute;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
