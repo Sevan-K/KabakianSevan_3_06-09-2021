@@ -10,6 +10,8 @@
       "img img"
       "heading aside"
       "txt aside";
+    // mixin
+    box-shadow: 0.75rem 0.75rem 1.5rem change-bg-color(color-text-light);
   }
   &--new::before {
     grid-area: img;
@@ -37,9 +39,11 @@
   }
   &__heading {
     grid-area: heading;
+    padding: 1.5rem 0 0 2rem;
   }
-  &___text {
+  &__text {
     grid-area: txt;
+    padding: 0.5rem 0 0 2rem;
   }
   &__aside {
     grid-area: aside;

@@ -183,14 +183,14 @@ body {
   grid-column: 2/-1;
   grid-row: 1;
   display: flex;
-  background: #f2f2f2;
+  background: whitesmoke;
   color: #000000;
   line-height: 8rem;
   border-radius: 2.5rem;
   overflow: hidden;
   position: relative;
   z-index: 1;
-  font-size: 2rem;
+  box-shadow: 0.5rem 0.5rem 0.75rem #e6e6e6;
 }
 .step__text--phone::before {
   content: "\f3cd";
@@ -203,6 +203,8 @@ body {
 }
 .step__text > p {
   flex: 1 1 70%;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 .step__text::after {
   content: "";
@@ -218,10 +220,12 @@ body {
 }
 .step__text::before {
   flex: 1 1 30%;
+  max-width: 10rem;
   text-align: center;
   font-family: "Font Awesome 5 Free";
   font-weight: bold;
   color: gray;
+  font-size: 2rem;
 }
 .step__text:hover::after {
   opacity: 1;
@@ -240,6 +244,7 @@ body {
   grid-template-columns: 1fr 8rem;
   grid-template-rows: clamp(7rem, 7rem + 25vw, 27rem) repeat(2, 1fr);
   grid-template-areas: "img img" "heading aside" "txt aside";
+  box-shadow: 0.75rem 0.75rem 1.5rem #e6e6e6;
 }
 .card--new::before {
   grid-area: img;
@@ -267,9 +272,11 @@ body {
 }
 .card__heading {
   grid-area: heading;
+  padding: 1.5rem 0 0 2rem;
 }
-.card___text {
+.card__text {
   grid-area: txt;
+  padding: 0.5rem 0 0 2rem;
 }
 .card__aside {
   grid-area: aside;
@@ -350,10 +357,17 @@ body {
   background: #e6e6e6;
   color: #000000;
 }
-.fieldset--lighter {
-  background: #f2f2f2;
+.fieldset--light:focus-within {
+  background: #f1eafb;
   color: #000000;
-  padding: 4rem 2rem;
+}
+.fieldset--light:focus-within > .fieldset__label {
+  color: #9256dc;
+}
+.fieldset--lighter {
+  background: whitesmoke;
+  color: #000000;
+  padding: 4rem 2rem 5rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -367,34 +381,62 @@ body {
   border: none;
   background: none;
   line-height: 5rem;
+  text-align: center;
 }
-.fieldset:focus-within {
-  background: #f1eafb;
-  color: #000000;
-}
-.fieldset:focus-within > .fieldset__label {
-  color: #9256dc;
+.fieldset__input:focus-visible {
+  outline: none;
 }
 .fieldset__heading {
   margin-bottom: 1rem;
+  font-size: 3rem;
 }
 .fieldset__btn {
-  margin-top: 2rem;
+  margin-top: 3rem;
   border: none;
-  background: linear-gradient(0deg, #9256dc 0%, #ff7ad9 100%);
+  background: linear-gradient(-5deg, #9256dc 0%, #ff7ad9 100%);
   color: white;
+  cursor: pointer;
   padding: 1.5rem 2em;
   border-radius: 5rem;
+  box-shadow: 0rem 0.3rem 0.6rem #b3b3b3;
+  transition: box-shadow 200ms;
+}
+.fieldset__btn:hover {
+  box-shadow: 0rem 0.5rem 0.8rem #b3b3b3;
+}
+
+.btn-grad {
+  background-image: linear-gradient(to right, #dc2424 0%, #4a569d 51%, #dc2424 100%);
+}
+
+.btn-grad {
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+.btn-grad:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
 }
 
 .how2do {
-  padding: 4rem 2rem;
+  padding: 4rem 2rem 5rem 2rem;
 }
 
 .main-section {
-  background: #f2f2f2;
+  background: whitesmoke;
   color: #000000;
-  padding: 4rem 2rem;
+  padding: 4rem 2rem 5rem 2rem;
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -407,25 +449,30 @@ body {
 }
 .footer__heading {
   font-family: "Shrikhand", sans-serif;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
-.footer li {
-  margin-bottom: 0.5rem;
+
+.footer-li {
+  margin-bottom: 0.75rem;
 }
-.footer__link {
-  color: inherit;
-}
-.footer__link--utensils::before {
+.footer-li--utensils::before {
   content: "\f2e7";
 }
-.footer__link--handshake::before {
+.footer-li--handshake::before {
   content: "\f4c4";
 }
-.footer__link--icon::before {
+.footer-li--icon::before {
   font-family: "Font Awesome 5 Free";
   font-weight: bold;
+  font-size: 1.5rem;
+  display: inline-block;
+  width: 7%;
+  text-align: center;
 }
-.footer__link:hover {
+.footer-li__link {
+  color: inherit;
+}
+.footer-li__link:hover {
   text-decoration: underline;
 }
 

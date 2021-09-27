@@ -9,13 +9,14 @@ $step__aside-size: 2.5rem;
 $icons-size: (
   steps: 2rem,
   cards: 3rem,
+  footer:1.5rem
 );
 $transition-duration: 300ms;
 
 // padding dimensions storage
 // $padding-unit:1rem; to be uses later when all padding are defined
 $padding-dimensions: (
-  section: 4rem 2rem,
+  section: 4rem 2rem 5rem 2rem,
   footer: 2rem 2rem,
   button: 1.5rem 2em,
 );
@@ -24,7 +25,7 @@ $padding-dimensions: (
 $bg-color-styles: (
   color-text-lighter: (
     color: $color-text,
-    lighten: 95%,
+    lighten: 96%,
   ),
   color-text-light: (
     color: $color-text,

@@ -27,9 +27,11 @@
     z-index: 1;
     @include before-content($step-before-content);
     //  a définir plus globalement dans la typo !!
-    font-size: map-get($icons-size, steps);
+    box-shadow: 0.5rem 0.5rem 0.75rem change-bg-color(color-text-light);
     & > p {
       flex: 1 1 70%;
+      font-size: 1.5rem;
+      font-weight: bold;
     }
     &::after {
       content: "";
@@ -41,10 +43,13 @@
     }
     &::before {
       flex: 1 1 30%;
+      max-width: 10rem;
       text-align: center;
       @include fontawesome(bold);
       // voir si cette propriété doit faire l'objet d'une fonction ou mixin
       color: lighten($color-text, 50%);
+      font-size: map-get($icons-size, steps);
+
     }
     &:hover {
       &::after {

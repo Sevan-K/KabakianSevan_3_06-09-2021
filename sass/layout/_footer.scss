@@ -3,19 +3,24 @@
   @include set-padding(footer);
   &__heading {
     font-family: "Shrikhand", sans-serif;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
-  li {
-    margin-bottom: 0.5rem;
+}
+.footer-li {
+  margin-bottom: 0.75rem;
+  &--icon {
+  }
+  @include before-content($footer__link-before-content);
+  &--icon::before {
+    @include fontawesome;
+    font-size: map-get($map: $icons-size, $key: footer);
+    display: inline-block;
+    width: 7%;
+    text-align: center;
+  
   }
   &__link {
     color: inherit;
-    // position: relative;
-    @include before-content($footer__link-before-content);
-    &--icon::before {
-      @include fontawesome;
-      // position: absolute;
-    }
     &:hover {
       text-decoration: underline;
     }
