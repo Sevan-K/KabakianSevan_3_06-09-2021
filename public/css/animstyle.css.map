@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"animstyle.css"}
+{"version":3,"sources":["../../../../animstyle.scss","../../animstyle.scss"],"names":[],"mappings":"AAAA;;;EAGE,UAAA;EACA,SAAA;EACA,sBAAA;ACCF;;ADCA;EACE,oBAAA;EACA,aAAA;ACEF;;ADAA;EACE,iBAAA;EACA,aAAA;EACA,2BAAA;EACA,gBAAA;EACA,WAAA;ACGF;ADFE;EACE,WAAA;EACA,gBAAA;EACA,mBAAA;ACIJ;ADHI;EACE,iBAAA;EACA,uBAAA;ACKN;ADFE;EACE,YAAA;EACA,qBAAA;ACIJ;ADAE;EACE,kBAAA;EACA,YAAA;EACA,iBAAA;EAEA,oBAAA;ACCJ;ADEI;EACE,kBAAA;ACAN","file":"animstyle.css"}
