@@ -1,8 +1,0 @@
-.main-section{
-    @include bg-text-color(color-text-lighter);
-    @include set-padding(section);
-    display: flex;
-    flex-direction: column;
-    // add in a variable
-    gap: 3rem;
-}
