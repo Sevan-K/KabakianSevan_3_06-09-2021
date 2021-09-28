@@ -346,25 +346,35 @@ body {
   color: #000000;
 }
 
-.explorer {
+.research {
   text-align: center;
-}
-
-.fieldset {
-  border: none;
-}
-.fieldset--light {
   background: #e6e6e6;
   color: #000000;
 }
-.fieldset--light:focus-within {
+.research:focus-within {
   background: #f1eafb;
   color: #000000;
 }
-.fieldset--light:focus-within > .fieldset__label {
+.research:focus-within > .research__label {
   color: #9256dc;
 }
-.fieldset--lighter {
+.research__label::before {
+  content: "\f3c5";
+  font-family: "Font Awesome 5 Free";
+  font-weight: bold;
+}
+.research__input {
+  border: none;
+  background: none;
+  line-height: 5rem;
+  text-align: center;
+}
+.research__input:focus-visible {
+  outline: none;
+}
+
+.explorer {
+  text-align: center;
   background: whitesmoke;
   color: #000000;
   padding: 4rem 2rem 5rem 2rem;
@@ -372,25 +382,11 @@ body {
   flex-direction: column;
   align-items: center;
 }
-.fieldset__label::before {
-  content: "\f3c5";
-  font-family: "Font Awesome 5 Free";
-  font-weight: bold;
-}
-.fieldset__input {
-  border: none;
-  background: none;
-  line-height: 5rem;
-  text-align: center;
-}
-.fieldset__input:focus-visible {
-  outline: none;
-}
-.fieldset__heading {
+.explorer__heading {
   margin-bottom: 1rem;
   font-size: 3rem;
 }
-.fieldset__btn {
+.explorer__btn {
   margin-top: 3rem;
   border: none;
   background: linear-gradient(-5deg, #9256dc 0%, #ff7ad9 100%);
@@ -401,32 +397,8 @@ body {
   box-shadow: 0rem 0.3rem 0.6rem #b3b3b3;
   transition: box-shadow 200ms;
 }
-.fieldset__btn:hover {
+.explorer__btn:hover {
   box-shadow: 0rem 0.5rem 0.8rem #b3b3b3;
-}
-
-.btn-grad {
-  background-image: linear-gradient(to right, #dc2424 0%, #4a569d 51%, #dc2424 100%);
-}
-
-.btn-grad {
-  margin: 10px;
-  padding: 15px 45px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;
-  box-shadow: 0 0 20px #eee;
-  border-radius: 10px;
-  display: block;
-}
-
-.btn-grad:hover {
-  background-position: right center;
-  /* change the direction of the change here */
-  color: #fff;
-  text-decoration: none;
 }
 
 .how2do {

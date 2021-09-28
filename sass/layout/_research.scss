@@ -1,0 +1,27 @@
+.research {
+    text-align: center;
+    @include bg-text-color(color-text-light);
+    &:focus-within {
+      @include bg-text-color(color-primary-light);
+      > .research__label {
+        color: $color-primary;
+      }
+    }
+    &__label {
+      &::before {
+        content: "\f3c5";
+        @include fontawesome(bold);
+      }
+    }
+    &__input {
+      // @include bg-text-color(color-text-light);
+      // width: 100%;
+      border: none;
+      background: none;
+      line-height: 5rem;
+      text-align: center;
+      &:focus-visible {
+        outline: none;
+      }
+    }
+  }

@@ -1,44 +1,11 @@
 // layout of the form
 .explorer {
   text-align: center;
-}
-// layout of the filedsets
-.fieldset {
-  border: none;
-  &--light {
-    @include bg-text-color(color-text-light);
-    &:focus-within {
-      @include bg-text-color(color-primary-light);
-      > .fieldset__label {
-        color: $color-primary;
-      }
-    }
-  }
-  &--lighter {
-    @include bg-text-color(color-text-lighter);
-    @include set-padding(section);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  &__label {
-    &::before {
-      content: "\f3c5";
-      @include fontawesome(bold);
-    }
-  }
-  &__input {
-    // @include bg-text-color(color-text-light);
-    // width: 100%;
-    border: none;
-    background: none;
-    line-height: 5rem;
-    text-align: center;
-    &:focus-visible {
-      outline: none;
-    }
-  }
-
+  @include bg-text-color(color-text-lighter);
+  @include set-padding(section);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   &__heading {
     margin-bottom: 1rem;
     // typo ??
@@ -64,31 +31,4 @@
       box-shadow: 0rem 0.5rem 0.8rem lighten($color: $color-text, $amount: 70%);
     }
   }
-}
-
-.btn-grad {
-  background-image: linear-gradient(
-    to right,
-    #dc2424 0%,
-    #4a569d 51%,
-    #dc2424 100%
-  );
-}
-.btn-grad {
-  margin: 10px;
-  padding: 15px 45px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;
-  box-shadow: 0 0 20px #eee;
-  border-radius: 10px;
-  display: block;
-}
-
-.btn-grad:hover {
-  background-position: right center; /* change the direction of the change here */
-  color: #fff;
-  text-decoration: none;
 }
