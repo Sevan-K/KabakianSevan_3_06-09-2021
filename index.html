@@ -16,7 +16,7 @@
   </head>
   <body>
     <!-- loading spinner -->
-    <div class="loading">
+    <!-- <div class="loading">
       <div class="loading__ball loading__ball--1"></div>
       <div class="loading__ball loading__ball--2"></div>
       <div class="loading__ball loading__ball--3"></div>
@@ -25,7 +25,7 @@
       <div class="loading__ball loading__ball--6"></div>
       <div class="loading__ball loading__ball--7"></div>
       <div class="loading__ball loading__ball--8"></div>
-    </div>
+    </div> -->
     <!-- div containging the whole page if needed -->
     <div class="main-wrapper">
       <!-- homepage header -->
@@ -35,27 +35,25 @@
         </p>
       </header>
       <!-- part to explore restaurents, since it is not functionnal action and method are not spécified yet now -->
-      <form class="explorer">
-        <fieldset class="fieldset fieldset--light">
-          <label class="fieldset__label" for="localisation-research"></label>
-          <input
-            class="fieldset__input"
-            type="search"
-            name="localisation-research"
-            id="localisation-research"
-            value="Paris, Belleville"
-          />
-        </fieldset>
-        <fieldset class="fieldset fieldset--lighter">
-          <h1 class="fieldset__heading">Réserver le menu qui vous convient</h1>
-          <p class="fieldset__text">
-            Découvrez des restaurants d'exeption sélectionnés par nos soins.
-          </p>
-          <button class="fieldset__btn submit-btn">
-            Explorez nos restaurants
-          </button>
-        </fieldset>
+      <form class="research">
+        <label class="research__label" for="localisation-research"></label>
+        <input
+          class="research__input"
+          type="search"
+          name="localisation-research"
+          id="localisation-research"
+          value="Paris, Belleville"
+        />
       </form>
+      <section class="explorer">
+        <h1 class="explorer__heading">Réserver le menu qui vous convient</h1>
+        <p class="explorer__text">
+          Découvrez des restaurants d'exeption sélectionnés par nos soins.
+        </p>
+        <a class="explorer__btn btn" href="#restaurents"
+          >Explorez nos restaurants</a
+        >
+      </section>
       <!-- section with the steps to follow -->
       <section class="how2do">
         <h2 class="how2do__heading">Fonctionnement</h2>
@@ -81,7 +79,7 @@
         </ul>
       </section>
       <!-- main for the restaurents cards -->
-      <main class="main-section">
+      <main class="main-section" id="restaurents">
         <h2 class="main-section__heading">Restaurants</h2>
         <a href="lapalettedugout.html" class="main-section__link">
           <article class="card card--restaurent card--new">
