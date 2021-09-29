@@ -35,6 +35,7 @@
       width: 100%;
       object-fit: cover;
       z-index: 1;
+      height: clamp(7rem, 7rem + 25vw, 27rem);
     }
   }
   &__heading {

@@ -1,0 +1,76 @@
+.restaurent-img {
+  width: 100%;
+  img {
+    width: 100%;
+    height: 36.5rem;
+    object-fit: cover;
+  }
+}
+.menu {
+  @include bg-text-color(color-text-lighter);
+  @include set-padding(section);
+  border-radius: 5rem;
+  position: relative;
+  bottom: 8rem;
+  &__heading {
+    font-family: "Shrikhand", sans-serif;
+    font-weight: 100;
+    display: inline-block;
+    width: 90%;
+  }
+  &__heart {
+      display: inline-block;
+    position: relative;
+
+    &::before {
+        content: "\f004";
+        @include fontawesome(normal);
+        // a inclure dans la palette de typo
+        font-size: map-get($icons-size, cards);
+        opacity: 1;
+        // faire une mixin couplée à une map ?
+        transition: opacity $transition-duration;
+      }
+      &::after {
+        content: "\f004";
+        font-family: "Font Awesome 5 Free";
+        font-weight: bold;
+        // a inclure dans la palette de typo
+        font-size: map-get($icons-size, cards);
+        @include position_absolute;
+        background: linear-gradient(
+          0deg,
+          $color-secondary 0%,
+          $color-primary 100%
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        opacity: 0;
+        transition: opacity $transition-duration;
+      }
+      &:hover {
+        &::before {
+          opacity: 0;
+        }
+        &::after {
+          opacity: 1;
+        }
+      }
+  }
+}
+
+// to move in an other layout
+.dishes{
+    &__heading{
+
+    }
+}
+
+// to move in a component
+.dish{
+    border-radius: 2rem;
+    overflow: hidden;
+    background: white;
+    margin-top: 1rem;
+}
