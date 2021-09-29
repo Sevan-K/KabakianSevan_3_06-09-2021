@@ -1,3 +1,5 @@
+$dish-anim-dur:500ms;
+$dish-rot-delay:200ms;
 *,
 *::before,
 *::after {
@@ -29,76 +31,84 @@
     background: lightblue;
   }
   &__aside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     width: 5rem;
     background: coral;
     margin-right: -5rem;
-    transition: all 1000ms ease-in-out;
+    transition: all $dish-anim-dur linear;
+
+    &::after {
+      content: "V";
+      transform: rotate(90);
+      transition: all $dish-anim-dur - $dish-rot-delay $dish-rot-delay ease-out;
+    }
   }
   &:hover {
     > .dish__aside {
       margin-right: 0rem;
+      &::after {
+        transform: rotate(360deg);
+      }
     }
   }
 }
-.dish2 {
-  background: white;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  height: 5rem;
-  display: block;
-  margin: auto;
-  &__article {
-    overflow: hidden;
-    white-space: nowrap;
-    height: 100%;
-    display: block;
-    position: absolute;
-    width: 80%;
-    top: 0;
-    left: 0;
-    border: 1px solid slategrey;
-    transition: all 1000ms ease-in-out;
-    > h3 {
-      overflow: inherit;
-      text-overflow: ellipsis;
-    }
-  }
-  &__price {
-    display: block;
-    width: 20%;
-    position: absolute;
-    right: 20%;
-    border: 1px solid slategrey;
-    height: 100%;
-    transition: all 1000ms ease-in-out;
-    transform: translateX(100%);
-  }
-  &__aside {
-    display: block;
-    position: absolute;
-    border: 1px solid slategrey;
-    transition: all 1000ms ease-in-out;
-    height: 100%;
-    right: 0;
-    width: 20%;
-    transform: translateX(100%);
-  }
-  &:hover {
-    > .dish2__article {
-      width: 60%;
-    }
-    > .dish2__price {
-      transform: translateX(0);
-    }
-    > .dish2__aside {
-      transform: translateX(0);
-    }
-  }
-}
-
-// top: 0;
-// right: 0;
-// bottom: 0;
-// left: 0;
+//  pas retenu...
+// .dish2 {
+//   background: white;
+//   overflow: hidden;
+//   position: relative;
+//   width: 100%;
+//   height: 5rem;
+//   display: block;
+//   margin: auto;
+//   &__article {
+//     overflow: hidden;
+//     white-space: nowrap;
+//     height: 100%;
+//     display: block;
+//     position: absolute;
+//     width: 80%;
+//     top: 0;
+//     left: 0;
+//     border: 1px solid slategrey;
+//     transition: all 1000ms ease-in-out;
+//     > h3 {
+//       overflow: inherit;
+//       text-overflow: ellipsis;
+//     }
+//   }
+//   &__price {
+//     display: block;
+//     width: 20%;
+//     position: absolute;
+//     right: 20%;
+//     border: 1px solid slategrey;
+//     height: 100%;
+//     transition: all 1000ms ease-in-out;
+//     transform: translateX(100%);
+//   }
+//   &__aside {
+//     display: block;
+//     position: absolute;
+//     border: 1px solid slategrey;
+//     transition: all 1000ms ease-in-out;
+//     height: 100%;
+//     right: 0;
+//     width: 20%;
+//     transform: translateX(100%);
+//   }
+//   &:hover {
+//     > .dish2__article {
+//       width: 60%;
+//     }
+//     > .dish2__price {
+//       transform: translateX(0);
+//     }
+//     > .dish2__aside {
+//       transform: translateX(0);
+//     }
+//   }
+// }
