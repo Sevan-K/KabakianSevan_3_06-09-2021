@@ -1,0 +1,35 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  background: cornsilk;
+  padding: 2rem;
+}
+@keyframes entrence {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+$entrence_nb: 4;
+$entrence_nb_dur: 1000ms;
+$entrence_nb_delay: $entrence_nb_dur * 0.2;
+.dish {
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  @for $i from 1 through $entrence_nb {
+    &--#{$i} {
+      animation: entrence $entrence_nb_dur $entrence_nb_delay * $i both;
+    }
+  }
+}
