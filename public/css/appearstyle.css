@@ -37,20 +37,22 @@
   display: flex;
   justify-content: space-between;
   margin-top: 1rem;
+  -webkit-animation: entrence 1000ms both;
+          animation: entrence 1000ms both;
 }
 .dish--1 {
-  -webkit-animation: entrence 1000ms 200ms both;
-          animation: entrence 1000ms 200ms both;
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
 }
 .dish--2 {
-  -webkit-animation: entrence 1000ms 400ms both;
-          animation: entrence 1000ms 400ms both;
+  -webkit-animation-delay: 400ms;
+          animation-delay: 400ms;
 }
 .dish--3 {
-  -webkit-animation: entrence 1000ms 600ms both;
-          animation: entrence 1000ms 600ms both;
+  -webkit-animation-delay: 600ms;
+          animation-delay: 600ms;
 }
 .dish--4 {
-  -webkit-animation: entrence 1000ms 800ms both;
-          animation: entrence 1000ms 800ms both;
+  -webkit-animation-delay: 800ms;
+          animation-delay: 800ms;
 }/*# sourceMappingURL=appearstyle.css.map */

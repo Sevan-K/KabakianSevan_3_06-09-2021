@@ -27,9 +27,10 @@ $entrence_nb_delay: $entrence_nb_dur * 0.2;
   display: flex;
   justify-content: space-between;
   margin-top: 1rem;
+  animation: entrence $entrence_nb_dur both;
   @for $i from 1 through $entrence_nb {
     &--#{$i} {
-      animation: entrence $entrence_nb_dur $entrence_nb_delay * $i both;
+      animation-delay: $entrence_nb_delay * $i;
     }
   }
 }
