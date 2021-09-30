@@ -13,22 +13,6 @@
   }
   &__btn {
     margin-top: 3rem;
-    //   partie à placer dans un composant (et une mixin?)
-    border: none;
-    background: linear-gradient(
-      -5deg,
-      $color-primary 0%,
-      $color-secondary 100%
-    );
-    color: lighten($color-text, 100%);
-    cursor: pointer;
-    @include set-padding(button);
-    border-radius: 5rem;
-    // voir si c'est possible d'utiliser opacity
-    box-shadow: 0rem 0.3rem 0.6rem lighten($color: $color-text, $amount: 70%);
-    transition: box-shadow 200ms;
-    &:hover {
-      box-shadow: 0rem 0.5rem 0.8rem lighten($color: $color-text, $amount: 70%);
-    }
+    //   partie à placer dans un composant (et une mixin?)    
   }
 }

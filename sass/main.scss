@@ -6,6 +6,7 @@
 @import "./base/base";
 @import "./base/typo";
 // imports from components
+@import "./components/btn";
 @import "./components/loading";
 @import "./components/step";
 @import "./components/card"; 
@@ -17,4 +18,5 @@
 @import "./layout/main-section";
 @import "./layout/footer";
 // imports from pages
-@import "./pages/menu"
+@import "./pages/menu";
+@import "./pages/disches";

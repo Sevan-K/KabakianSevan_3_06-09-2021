@@ -26,10 +26,29 @@ ul {
   list-style: none;
 }
 
+button {
+  border: none;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 300;
+}
+
+.btn {
+  background: linear-gradient(-5deg, #9256dc 0%, #ff7ad9 100%);
+  color: white;
+  cursor: pointer;
+  padding: 1.5em 2em;
+  border-radius: 5rem;
+  min-width: 50%;
+  box-shadow: 0rem 0.3rem 0.6rem #b3b3b3;
+  transition: all 200ms;
+}
+.btn:hover {
+  box-shadow: 0rem 0.5rem 0.8rem #999999;
+  transform: scale(1.01);
 }
 
 @keyframes loading-spiner {
@@ -389,17 +408,6 @@ body {
 }
 .explorer__btn {
   margin-top: 3rem;
-  border: none;
-  background: linear-gradient(-5deg, #9256dc 0%, #ff7ad9 100%);
-  color: white;
-  cursor: pointer;
-  padding: 1.5rem 2em;
-  border-radius: 5rem;
-  box-shadow: 0rem 0.3rem 0.6rem #b3b3b3;
-  transition: box-shadow 200ms;
-}
-.explorer__btn:hover {
-  box-shadow: 0rem 0.5rem 0.8rem #b3b3b3;
 }
 
 .how2do {
@@ -470,7 +478,8 @@ body {
   font-family: "Shrikhand", sans-serif;
   font-weight: 100;
   display: inline-block;
-  width: 90%;
+  width: 85%;
+  font-size: 2.4rem;
 }
 .menu__heart {
   display: inline-block;
@@ -506,6 +515,21 @@ body {
 }
 .menu__heart:hover::after {
   opacity: 1;
+}
+.menu__btn {
+  margin: auto;
+}
+
+.dishes {
+  width: 100%;
+}
+.dishes__heading {
+  width: 4.5ch;
+  text-transform: uppercase;
+  font-weight: 400;
+  border-bottom: #98e2cf solid 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 1.8rem;
 }
 
 .dish {

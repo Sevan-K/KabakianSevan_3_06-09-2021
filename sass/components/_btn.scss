@@ -1,0 +1,15 @@
+.btn {
+  background: linear-gradient(-5deg, $color-primary 0%, $color-secondary 100%);
+  color: lighten($color-text, 100%);
+  cursor: pointer;
+  @include set-padding(button);
+  border-radius: 5rem;
+  min-width: 50%;
+  // voir si c'est possible d'utiliser opacity
+  box-shadow: 0rem 0.3rem 0.6rem lighten($color: $color-text, $amount: 70%);
+  transition: all 200ms;
+  &:hover {
+    box-shadow: 0rem 0.5rem 0.8rem lighten($color: $color-text, $amount: 60%);
+    transform: scale(1.01);
+  }
+}
