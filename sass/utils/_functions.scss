@@ -1,6 +1,6 @@
 // function to chose text color depending on background
 @function change-color-text($color) {
-  @if (lightness($color) > 70%) {
+  @if (lightness($color) > 75%) {
     @return $color-text;
   } @else {
     @return lighten($color-text,100%);
