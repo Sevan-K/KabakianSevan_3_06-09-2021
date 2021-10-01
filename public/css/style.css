@@ -32,15 +32,18 @@ button {
 
 body {
   font-family: "Roboto", sans-serif;
-  font-size: 18px;
   font-weight: 300;
+}
+
+.main-wrapper {
+  font-size: clamp(1.5rem, 0.75rem + 2.4vw, 3rem);
 }
 
 .btn {
   background: linear-gradient(-5deg, #9256dc 0%, #ff7ad9 100%);
   color: white;
   cursor: pointer;
-  padding: 1.5em 2em;
+  padding: 1em 1.5em;
   border-radius: 5rem;
   min-width: 50%;
   box-shadow: 0rem 0.3rem 0.6rem #b3b3b3;
@@ -222,7 +225,6 @@ body {
 }
 .step__text > p {
   flex: 1 1 70%;
-  font-size: 1.5rem;
   font-weight: bold;
 }
 .step__text::after {
@@ -336,6 +338,13 @@ body {
   opacity: 1;
 }
 
+.dish {
+  border-radius: 2rem;
+  overflow: hidden;
+  background: white;
+  margin-top: 1rem;
+}
+
 .header {
   display: flex;
   justify-content: center;
@@ -403,8 +412,7 @@ body {
   align-items: center;
 }
 .explorer__heading {
-  margin-bottom: 1rem;
-  font-size: 3rem;
+  padding: 0 3rem 1rem 3rem;
 }
 .explorer__btn {
   margin-top: 3rem;
@@ -473,15 +481,24 @@ body {
   border-radius: 5rem;
   position: relative;
   bottom: 8rem;
+  display: grid;
+  grid-template-columns: 80% 1fr;
+  grid-template-rows: 4rem repeat(3, 1fr) 10rem;
+  grid-template-areas: "heading heart" "dishes--1 dishes--1" "dishes--2 dishes--2" "dishes--3 dishes--3" "btn btn";
+  grid-row-gap: 3rem;
 }
 .menu__heading {
+  grid-area: heading;
+  align-self: end;
   font-family: "Shrikhand", sans-serif;
   font-weight: 100;
   display: inline-block;
-  width: 85%;
-  font-size: 2.4rem;
+  font-size: clamp(2.2rem, 1.25rem + 3.25vw, 5rem);
 }
 .menu__heart {
+  grid-area: heart;
+  align-self: end;
+  justify-self: center;
   display: inline-block;
   position: relative;
 }
@@ -516,27 +533,29 @@ body {
 .menu__heart:hover::after {
   opacity: 1;
 }
-.menu__btn {
-  margin: auto;
-}
-
-.dishes {
+.menu__section {
   width: 100%;
 }
-.dishes__heading {
+.menu__section--1 {
+  grid-area: dishes--1;
+}
+.menu__section--2 {
+  grid-area: dishes--2;
+}
+.menu__section--3 {
+  grid-area: dishes--3;
+}
+.menu__section > h2 {
   width: 4.5ch;
   text-transform: uppercase;
   font-weight: 400;
   border-bottom: #98e2cf solid 0.5rem;
   padding-bottom: 0.5rem;
-  font-size: 1.8rem;
+  font-size: inherit;
 }
-
-.dish {
-  border-radius: 2rem;
-  overflow: hidden;
-  background: white;
-  margin-top: 1rem;
+.menu__btn {
+  grid-area: btn;
+  margin: auto;
 }
 
 /*# sourceMappingURL=style.css.map */

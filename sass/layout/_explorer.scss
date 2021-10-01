@@ -7,12 +7,9 @@
   flex-direction: column;
   align-items: center;
   &__heading {
-    margin-bottom: 1rem;
-    // typo ??
-    font-size: 3rem;
+    padding: 0 3rem 1rem 3rem;
   }
   &__btn {
     margin-top: 3rem;
-    //   partie à placer dans un composant (et une mixin?)    
   }
 }
