@@ -13,7 +13,7 @@ $check-side-size: 6rem;
     transform: translateY(0);
   }
 }
-$entrence_nb: 4;
+$entrence_nb: 9;
 $entrence_nb_dur: 1000ms;
 $entrence_nb_delay: $entrence_nb_dur * 0.2;
 @mixin entrence {
@@ -50,7 +50,7 @@ $entrence_nb_delay: $entrence_nb_dur * 0.2;
   }
   &__price {
     display: flex;
-    width: $check-side-size;
+    // width: $check-side-size;
     justify-content: flex-start;
     align-items: flex-end;
     padding: 1rem;

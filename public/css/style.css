@@ -343,6 +343,21 @@ body {
 .dish--4 {
   animation-delay: 800ms;
 }
+.dish--5 {
+  animation-delay: 1000ms;
+}
+.dish--6 {
+  animation-delay: 1200ms;
+}
+.dish--7 {
+  animation-delay: 1400ms;
+}
+.dish--8 {
+  animation-delay: 1600ms;
+}
+.dish--9 {
+  animation-delay: 1800ms;
+}
 .dish__article {
   flex: 1;
   overflow: hidden;
@@ -356,7 +371,6 @@ body {
 }
 .dish__price {
   display: flex;
-  width: 6rem;
   justify-content: flex-start;
   align-items: flex-end;
   padding: 1rem;
