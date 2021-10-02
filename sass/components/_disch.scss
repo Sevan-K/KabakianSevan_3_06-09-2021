@@ -3,6 +3,28 @@ $dish-anim-dur: 500ms;
 $dish-rot-delay: 200ms;
 $check-side-size: 6rem;
 
+@keyframes entrence {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+$entrence_nb: 4;
+$entrence_nb_dur: 1000ms;
+$entrence_nb_delay: $entrence_nb_dur * 0.2;
+@mixin entrence {
+  animation: entrence $entrence_nb_dur both;
+  @for $i from 1 through $entrence_nb {
+    &--#{$i} {
+      animation-delay: $entrence_nb_delay * $i;
+    }
+  }
+}
+
 // dish styling
 .dish {
   border-radius: 1.5rem;
@@ -14,6 +36,7 @@ $check-side-size: 6rem;
   justify-content: flex-start;
   overflow: hidden;
   width: 100%;
+  @include entrence;
   &__article {
     flex: 1;
     overflow: hidden;
@@ -44,7 +67,7 @@ $check-side-size: 6rem;
     &::after {
       content: "\f058";
       @include fontawesome(bold);
-      font-size: map-get($map: $icons-size , $key: steps);
+      font-size: map-get($map: $icons-size, $key: steps);
       transform: rotate(90);
       transition: all $dish-anim-dur - $dish-rot-delay $dish-rot-delay ease-out;
     }

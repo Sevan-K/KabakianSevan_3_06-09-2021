@@ -1,6 +1,8 @@
 // Variable equal to the square root of 2 ==> 1.41421356237
 $sqrt-2: 1.414;
 $load-size: clamp(2rem, 2rem + 1vw, 4rem);
+$loading-dur: 750ms;
+$loading-nb: 8;
 
 $ball-positions: (
   1: (
@@ -9,15 +11,15 @@ $ball-positions: (
   ),
   2: (
     X: calc(1 / #{$sqrt-2}),
-    Y: calc(1 / #{$sqrt-2}),
+    Y: calc(-1 / #{$sqrt-2}),
   ),
   3: (
     X: 0,
-    Y: 1,
+    Y: -1,
   ),
   4: (
     X: calc(-1 / #{$sqrt-2}),
-    Y: calc(1 / #{$sqrt-2}),
+    Y: calc(-1 / #{$sqrt-2}),
   ),
   5: (
     X: -1,
@@ -25,15 +27,15 @@ $ball-positions: (
   ),
   6: (
     X: calc(-1 / #{$sqrt-2}),
-    Y: calc(-1 / #{$sqrt-2}),
+    Y: calc(1 / #{$sqrt-2}),
   ),
   7: (
     X: 0,
-    Y: -1,
+    Y: 1,
   ),
   8: (
     X: calc(1 / #{$sqrt-2}),
-    Y: calc(-1 / #{$sqrt-2}),
+    Y: calc(1 / #{$sqrt-2}),
   ),
 );
 
@@ -56,32 +58,11 @@ $ball-positions: (
 }
 
 @keyframes loading-spiner {
-  0% {
-    opacity: 0;
-  }
-  12.5% {
-    opacity: 0.125;
-  }
-  25% {
-    opacity: 0.25;
-  }
-  37.5% {
-    opacity: 0.375;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  62.5% {
-    opacity: 0.625;
-  }
-  75% {
-    opacity: 0.75;
-  }
-  87.5% {
-    opacity: 0.875;
-  }
-  100% {
+  from {
     opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
 @keyframes loading-disapear {
@@ -99,7 +80,7 @@ $ball-positions: (
   width: 100%;
   height: 100%;
   @include bg-text-color(color-primary-lighter);
-  animation: loading-disapear 0.5s 3s forwards;
+  animation: loading-disapear $loading-dur 3*$loading-dur  forwards;
   z-index: 10;
   &__ball {
     position: fixed;
@@ -115,12 +96,12 @@ $ball-positions: (
       height: $load-size;
       border-radius: 50%;
       background: $color-primary;
-      animation: loading-spiner 500ms 4 alternate linear backwards;
+      opacity: 0;
+      animation: loading-spiner $loading-dur 4 linear;
     }
-    @for $i from 1 through 8 {
+    @for $i from 1 through $loading-nb {
       &--#{$i}::after {
-        animation-delay: (8-$i + 1) * 125ms;
-        opacity: 1- ((8-$i) * 0.125);
+        animation-delay: $i * $loading-dur/$loading-nb;
       }
     }
     &::before {

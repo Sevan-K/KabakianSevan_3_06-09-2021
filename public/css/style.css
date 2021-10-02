@@ -55,32 +55,11 @@ body {
 }
 
 @keyframes loading-spiner {
-  0% {
-    opacity: 0;
-  }
-  12.5% {
-    opacity: 0.125;
-  }
-  25% {
-    opacity: 0.25;
-  }
-  37.5% {
-    opacity: 0.375;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  62.5% {
-    opacity: 0.625;
-  }
-  75% {
-    opacity: 0.75;
-  }
-  87.5% {
-    opacity: 0.875;
-  }
-  100% {
+  from {
     opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
 @keyframes loading-disapear {
@@ -98,7 +77,7 @@ body {
   height: 100%;
   background: #faf7fd;
   color: #000000;
-  animation: loading-disapear 0.5s 3s forwards;
+  animation: loading-disapear 750ms 2250ms forwards;
   z-index: 10;
 }
 .loading__ball {
@@ -112,25 +91,25 @@ body {
   transform: translate(calc(1*clamp(2rem, 2rem + 1vw, 4rem)* 2), calc(0*clamp(2rem, 2rem + 1vw, 4rem)* 2));
 }
 .loading__ball--2 {
-  transform: translate(calc(calc(1 / 1.414)*clamp(2rem, 2rem + 1vw, 4rem)* 2), calc(calc(1 / 1.414)*clamp(2rem, 2rem + 1vw, 4rem)* 2));
+  transform: translate(calc(calc(1 / 1.414)*clamp(2rem, 2rem + 1vw, 4rem)* 2), calc(calc(-1 / 1.414)*clamp(2rem, 2rem + 1vw, 4rem)* 2));
 }
 .loading__ball--3 {
-  transform: translate(calc(0*clamp(2rem, 2rem + 1vw, 4rem)* 2), calc(1*clamp(2rem, 2rem + 1vw, 4rem)* 2));
+  transform: translate(calc(0*clamp(2rem, 2rem + 1vw, 4rem)* 2), calc(-1*clamp(2rem, 2rem + 1vw, 4rem)* 2));
 }
 .loading__ball--4 {
-  transform: translate(calc(calc(-1 / 1.414)*clamp(2rem, 2rem + 1vw, 4rem)* 2), calc(calc(1 / 1.414)*clamp(2rem, 2rem + 1vw, 4rem)* 2));
+  transform: translate(calc(calc(-1 / 1.414)*clamp(2rem, 2rem + 1vw, 4rem)* 2), calc(calc(-1 / 1.414)*clamp(2rem, 2rem + 1vw, 4rem)* 2));
 }
 .loading__ball--5 {
   transform: translate(calc(-1*clamp(2rem, 2rem + 1vw, 4rem)* 2), calc(0*clamp(2rem, 2rem + 1vw, 4rem)* 2));
 }
 .loading__ball--6 {
-  transform: translate(calc(calc(-1 / 1.414)*clamp(2rem, 2rem + 1vw, 4rem)* 2), calc(calc(-1 / 1.414)*clamp(2rem, 2rem + 1vw, 4rem)* 2));
+  transform: translate(calc(calc(-1 / 1.414)*clamp(2rem, 2rem + 1vw, 4rem)* 2), calc(calc(1 / 1.414)*clamp(2rem, 2rem + 1vw, 4rem)* 2));
 }
 .loading__ball--7 {
-  transform: translate(calc(0*clamp(2rem, 2rem + 1vw, 4rem)* 2), calc(-1*clamp(2rem, 2rem + 1vw, 4rem)* 2));
+  transform: translate(calc(0*clamp(2rem, 2rem + 1vw, 4rem)* 2), calc(1*clamp(2rem, 2rem + 1vw, 4rem)* 2));
 }
 .loading__ball--8 {
-  transform: translate(calc(calc(1 / 1.414)*clamp(2rem, 2rem + 1vw, 4rem)* 2), calc(calc(-1 / 1.414)*clamp(2rem, 2rem + 1vw, 4rem)* 2));
+  transform: translate(calc(calc(1 / 1.414)*clamp(2rem, 2rem + 1vw, 4rem)* 2), calc(calc(1 / 1.414)*clamp(2rem, 2rem + 1vw, 4rem)* 2));
 }
 .loading__ball::after {
   content: "";
@@ -139,39 +118,32 @@ body {
   height: clamp(2rem, 2rem + 1vw, 4rem);
   border-radius: 50%;
   background: #9256dc;
-  animation: loading-spiner 500ms 4 alternate linear backwards;
+  opacity: 0;
+  animation: loading-spiner 750ms 4 linear;
 }
 .loading__ball--1::after {
-  animation-delay: 1000ms;
-  opacity: 0.125;
+  animation-delay: 93.75ms;
 }
 .loading__ball--2::after {
-  animation-delay: 875ms;
-  opacity: 0.25;
+  animation-delay: 187.5ms;
 }
 .loading__ball--3::after {
-  animation-delay: 750ms;
-  opacity: 0.375;
+  animation-delay: 281.25ms;
 }
 .loading__ball--4::after {
-  animation-delay: 625ms;
-  opacity: 0.5;
+  animation-delay: 375ms;
 }
 .loading__ball--5::after {
-  animation-delay: 500ms;
-  opacity: 0.625;
+  animation-delay: 468.75ms;
 }
 .loading__ball--6::after {
-  animation-delay: 375ms;
-  opacity: 0.75;
+  animation-delay: 562.5ms;
 }
 .loading__ball--7::after {
-  animation-delay: 250ms;
-  opacity: 0.875;
+  animation-delay: 656.25ms;
 }
 .loading__ball--8::after {
-  animation-delay: 125ms;
-  opacity: 1;
+  animation-delay: 750ms;
 }
 .loading__ball::before {
   content: "";
@@ -338,6 +310,16 @@ body {
   opacity: 1;
 }
 
+@keyframes entrence {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .dish {
   border-radius: 1.5rem;
   overflow: hidden;
@@ -347,6 +329,19 @@ body {
   justify-content: flex-start;
   overflow: hidden;
   width: 100%;
+  animation: entrence 1000ms both;
+}
+.dish--1 {
+  animation-delay: 200ms;
+}
+.dish--2 {
+  animation-delay: 400ms;
+}
+.dish--3 {
+  animation-delay: 600ms;
+}
+.dish--4 {
+  animation-delay: 800ms;
 }
 .dish__article {
   flex: 1;
