@@ -13,7 +13,7 @@ $check-side-size: 6rem;
     transform: translateY(0);
   }
 }
-$entrence_nb: 9;
+$entrence_nb: 10;
 $entrence_nb_dur: 1000ms;
 $entrence_nb_delay: $entrence_nb_dur * 0.2;
 @mixin entrence {
@@ -54,6 +54,7 @@ $entrence_nb_delay: $entrence_nb_dur * 0.2;
     justify-content: flex-start;
     align-items: flex-end;
     padding: 1rem;
+    font-weight: bold;
   }
   &__aside {
     display: flex;
@@ -63,13 +64,13 @@ $entrence_nb_delay: $entrence_nb_dur * 0.2;
     width: $check-side-size;
     @include bg-text-color(color-tertiary);
     margin-right: -$check-side-size;
-    transition: all $dish-anim-dur linear;
+    transition: all $dish-anim-dur $dish-rot-delay linear;
     &::after {
       content: "\f058";
       @include fontawesome(bold);
       font-size: map-get($map: $icons-size, $key: steps);
       transform: rotate(90);
-      transition: all $dish-anim-dur - $dish-rot-delay $dish-rot-delay ease-out;
+      transition: all $dish-anim-dur - $dish-rot-delay 2*$dish-rot-delay ease-out;
     }
   }
   &:hover {
