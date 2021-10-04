@@ -1,30 +1,31 @@
 .card {
+  // the fisrt 3 are shared with dish component
   border-radius: 2rem;
   overflow: hidden;
   background: white;
-  &--restaurent {
-    display: grid;
-    grid-template-columns: 1fr 8rem;
-    grid-template-rows: clamp(7rem, 7rem + 25vw, 27rem) repeat(2, 1fr);
-    grid-template-areas:
-      "img img"
-      "heading aside"
-      "txt aside";
-    // mixin
-    box-shadow: 0.75rem 0.75rem 1.5rem change-bg-color(color-text-light);
-  }
+  display: grid;
+  grid-template-columns: 1fr 8rem;
+  grid-template-rows: clamp(7rem, 7rem + 25vw, 27rem) repeat(2, 1fr);
+  grid-template-areas:
+    "img img"
+    "heading aside"
+    "txt aside";
+  // mixin ??
+  box-shadow: 0.75rem 0.75rem 1.5rem change-bg-color(color-text-light);
   &--new::before {
     grid-area: img;
     justify-self: right;
     position: relative;
     right: 2rem;
     top: 2rem;
-    padding: 1rem;
-    // width: calc(2rem+7ch);
-    width: 9ch;
-    height: 4rem;
     content: "Nouveau";
-    color: darken($color-tertiary, 30%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.75em;
+    max-height: 2.25em;
+    border-radius: 0.2em;
+    color: darken($color-tertiary, 35%);
     font-weight: bold;
     background: $color-tertiary;
     z-index: 2;

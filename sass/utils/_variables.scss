@@ -52,16 +52,17 @@ $bg-color-styles: (
     lighten: 0%,
   )
 );
-
 // incons codes for steps
 $step-before-content: (
   phone: "\f3cd",
   list: "\f03a",
   store: "\f54e",
 );
-
 // icons codes for footer links
 $footer__link-before-content: (
   utensils: "\f2e7",
   handshake: "\f4c4",
 );
+// breakpoints
+$breakpoint-medium:660px;
+$breakpoint-big:1024px;

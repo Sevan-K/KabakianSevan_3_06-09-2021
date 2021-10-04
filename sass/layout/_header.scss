@@ -1,25 +1,34 @@
+@keyframes arrow-side-move {
+  from {
+    transform: translateX(-5%);
+  }
+  to {
+    transform: translateX(5%);
+  }
+}
+
 .header {
   // faire une mixin avec le displayflex
   display: flex;
   justify-content: center;
   align-items: center;
   // utiliser une variable pour le padding ?
-  padding: 1rem 0;
+  padding: 0.5em 0;
   &--shadow {
     position: relative;
     // mixin pour les ombres
     box-shadow: 0 0 1rem lighten($color: $color-text, $amount: 70%);
   }
   &__logo {
-    flex: 1;
-    text-align: center;
+    width: 50%;
+    max-width: 300px;
     img {
-      width: 50%;
+      width: 100%;
     }
   }
   &__link {
     position: absolute;
-    left: 0;
+    left: 2vw;
     z-index: 1;
     // utiliser une variable pour le padding ?
     padding: 1rem;
@@ -28,6 +37,9 @@
       font-family: "Font Awesome 5 Free";
       font-weight: bold;
       color: $color-text;
+    }
+    &:hover {
+      animation: arrow-side-move 100ms 2 alternate cubic-bezier(0.4, 0.1, 0.6, 0.9);
     }
   }
 }

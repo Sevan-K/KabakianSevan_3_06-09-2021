@@ -1,8 +1,48 @@
-.main-section{
-    @include bg-text-color(color-text-lighter);
-    @include set-padding(section);
-    display: flex;
-    flex-direction: column;
-    // add in a variable
-    gap: 3rem;
+.main-section {
+  @include bg-text-color(color-text-lighter);
+  @include set-padding(section);
+  display: flex;
+  flex-direction: column;
+  // add in a variable
+  gap: 3rem;
+  @include responsive($breakpoint-medium) {
+    display: grid;
+    grid-template-columns: 10% 30% 10% 10% 30% 10%;
+    grid-template-rows: 4rem repeat(2, 1fr);
+    grid-template-areas:
+      "head head head head head head"
+      "card1 card1 null card2 card2 null"
+      "null card3 card3 null card4 card4";
+    grid-gap: 0;
+    row-gap: 3rem;
+  }
+  &__heading {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    // grid-area: head;
+  }
+  &__link {
+    // cards placing when device is big enough
+    // @for $i from 1 through 4 {
+    //   &--#{$i} {
+    //     grid-area: card#{$i};
+    //   }
+    // }
+    &--1 {
+      grid-row: 2/3;
+      grid-column: 2/4;
+    }
+    &--2 {
+      grid-row: 2/3;
+      grid-column: 5/-1;
+    }
+    &--3 {
+      grid-row: 3/4;
+      grid-column: 1/3;
+    }
+    &--4 {
+      grid-row: 3/4;
+      grid-column: 4/6;
+    }
+  }
 }

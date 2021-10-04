@@ -69,3 +69,9 @@
       }
     }
 }
+// mixin for the mediaquerries 
+@mixin responsive($width) {
+  @media screen and (min-width:$width) {
+    @content;
+  } 
+}
