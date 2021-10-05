@@ -1,3 +1,11 @@
 .how2do {
   @include set-padding(section);
+  @include responsive($breakpoint-medium) {
+    @include set-padding(section-large);
+    &__list {
+      @include responsive($breakpoint-medium) {
+        padding: 0 10vw;
+      }
+    }
+  }
 }

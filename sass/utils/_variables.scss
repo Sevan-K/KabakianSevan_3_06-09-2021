@@ -17,6 +17,7 @@ $transition-duration: 300ms;
 // $padding-unit:1rem; to be uses later when all padding are defined
 $padding-dimensions: (
   section: 4rem 2rem 5rem 2rem,
+  section-large: 4rem 3vw 6rem 3vw,
   footer: 2rem 2rem,
   button: 1em 1.5em,
 );
@@ -64,5 +65,5 @@ $footer__link-before-content: (
   handshake: "\f4c4",
 );
 // breakpoints
-$breakpoint-medium:660px;
+$breakpoint-medium:680px;
 $breakpoint-big:1024px;

@@ -49,9 +49,11 @@
     padding: 0.5rem 0 0 2rem;
   }
   &__aside {
+    width: 100%;
     grid-area: aside;
     align-self: center;
     justify-self: center;
+    text-align: center;
     @include heart-styling;
   }
 }

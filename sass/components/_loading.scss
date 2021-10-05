@@ -101,7 +101,8 @@ $ball-positions: (
     }
     @for $i from 1 through $loading-nb {
       &--#{$i}::after {
-        animation-delay: $i * $loading-dur/$loading-nb;
+        $j:-1+$i;
+        animation-delay: $j * $loading-dur/$loading-nb;
       }
     }
     &::before {

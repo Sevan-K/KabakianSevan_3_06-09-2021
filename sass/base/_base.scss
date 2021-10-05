@@ -29,7 +29,7 @@ button {
 }
 .main-wrapper {
   @include responsive($breakpoint-big){
-    max-width: $breakpoint-big;
+    // max-width: $breakpoint-big;
     margin: auto;
   }
 }
