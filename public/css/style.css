@@ -42,7 +42,7 @@ body {
 }
 
 .main-wrapper {
-  font-size: clamp(1.5rem, 0.75rem + 1.5vw, 2.25rem);
+  font-size: 1.5rem;
 }
 
 .btn {
@@ -589,31 +589,40 @@ body {
   background: whitesmoke;
   color: #000000;
   padding: 4rem 2rem 5rem 2rem;
-  border-radius: 5rem;
+  border-radius: 5rem 5rem 0 0;
   position: relative;
   bottom: 8rem;
   display: grid;
-  grid-template-columns: 80% 1fr;
-  grid-template-rows: 4rem repeat(3, 1fr) 10rem;
-  grid-template-areas: "heading heart" "dishes--1 dishes--1" "dishes--2 dishes--2" "dishes--3 dishes--3" "btn btn";
+  grid-template-columns: 100%;
+  grid-template-rows: clamp(3rem, 1rem+4vw, 6rem) repeat(3, 1fr) 10rem;
+  grid-template-areas: "heading " "dishes--1" "dishes--2" "dishes--3" "btn";
   grid-row-gap: 3rem;
+}
+@media screen and (min-width: 1024px) {
+  .menu {
+    grid-template-columns: repeat(3, 30vw);
+    grid-template-rows: clamp(3rem, 1rem+4vw, 6rem) 1fr 10rem;
+    grid-template-areas: "heading heading heading" "dishes--1 dishes--2 dishes--3" "btn btn btn";
+    grid-column-gap: 3vw;
+  }
 }
 .menu__heading {
   grid-area: heading;
-  align-self: end;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu__heading--text {
   font-family: "Shrikhand", sans-serif;
   font-weight: 100;
-  display: inline-block;
-  font-size: clamp(2.2rem, 1.25rem + 3.25vw, 5rem);
+  font-size: clamp(2.2rem, 1.25rem + 3.25vw, 4rem);
 }
-.menu__heart {
-  grid-area: heart;
-  align-self: end;
-  justify-self: center;
-  display: inline-block;
+.menu__heading--heart {
+  display: flex;
+  padding-right: 10%;
   position: relative;
 }
-.menu__heart::before {
+.menu__heading--heart::before {
   content: "\f004";
   font-family: "Font Awesome 5 Free";
   font-weight: normal;
@@ -621,7 +630,7 @@ body {
   opacity: 1;
   transition: opacity 300ms;
 }
-.menu__heart::after {
+.menu__heading--heart::after {
   content: "\f004";
   font-family: "Font Awesome 5 Free";
   font-weight: bold;
@@ -638,14 +647,11 @@ body {
   opacity: 0;
   transition: opacity 300ms;
 }
-.menu__heart:hover::before {
+.menu__heading--heart:hover::before {
   opacity: 0;
 }
-.menu__heart:hover::after {
+.menu__heading--heart:hover::after {
   opacity: 1;
-}
-.menu__section {
-  width: 100%;
 }
 .menu__section--1 {
   grid-area: dishes--1;

@@ -9,38 +9,46 @@
 .menu {
   @include bg-text-color(color-text-lighter);
   @include set-padding(section);
-  border-radius: 5rem;
+  border-radius: 5rem 5rem 0 0;
   position: relative;
   bottom: 8rem;
   display: grid;
-  grid-template-columns: 80% 1fr;
-  grid-template-rows: 4rem repeat(3, 1fr) 10rem;
+  grid-template-columns: 100%;
+  grid-template-rows: clamp(3rem, 1rem+4vw, 6rem) repeat(3, 1fr) 10rem;
   grid-template-areas:
-    "heading heart"
-    "dishes--1 dishes--1"
-    "dishes--2 dishes--2"
-    "dishes--3 dishes--3"
-    "btn btn";
+    "heading "
+    "dishes--1"
+    "dishes--2"
+    "dishes--3"
+    "btn";
   grid-row-gap: 3rem;
+  @include responsive($breakpoint-big) {
+    grid-template-columns: repeat(3, 30vw);
+    grid-template-rows: clamp(3rem, 1rem+4vw, 6rem) 1fr 10rem;
+    grid-template-areas:
+      "heading heading heading"
+      "dishes--1 dishes--2 dishes--3"
+      "btn btn btn";
+      grid-column-gap: 3vw;
+  }
   &__heading {
     grid-area: heading;
-    align-self: end;
-    font-family: "Shrikhand", sans-serif;
-    font-weight: 100;
-    display: inline-block;
-    // a modifier pour intégrer du responsive
-   font-size: clamp(2.2rem, 1.25rem + 3.25vw, 5rem);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &--text {
+      font-family: "Shrikhand", sans-serif;
+      font-weight: 100;
+      font-size: clamp(2.2rem, 1.25rem + 3.25vw, 4rem);
+    }
+    &--heart {
+      display: flex;
+      padding-right: 10%;
+      @include heart-styling;
+    }
   }
   // part to include the heart and its animation
-  &__heart {
-    grid-area: heart;
-    align-self: end;
-    justify-self: center;
-    display: inline-block;
-    @include heart-styling;
-  }
   &__section {
-    width: 100%;
     @for $i from 1 through 3 {
       &--#{$i} {
         grid-area: dishes--#{$i};

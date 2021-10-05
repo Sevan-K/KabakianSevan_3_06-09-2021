@@ -33,45 +33,40 @@
 
 @mixin heart-styling {
   position: relative;
+  &::before {
+    content: "\f004";
+    @include fontawesome(normal);
+    // a inclure dans la palette de typo
+    font-size: map-get($icons-size, cards);
+    opacity: 1;
+    // faire une mixin couplée à une map ?
+    transition: opacity $transition-duration;
+  }
+  &::after {
+    content: "\f004";
+    @include fontawesome(bold);
+    // a inclure dans la palette de typo
+    font-size: map-get($icons-size, cards);
+    @include position_absolute;
+    background: linear-gradient(0deg, $color-secondary 0%, $color-primary 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    opacity: 0;
+    transition: opacity $transition-duration;
+  }
+  &:hover {
     &::before {
-      content: "\f004";
-      @include fontawesome(normal);
-      // a inclure dans la palette de typo
-      font-size: map-get($icons-size, cards);
-      opacity: 1;
-      // faire une mixin couplée à une map ?
-      transition: opacity $transition-duration;
+      opacity: 0;
     }
     &::after {
-      content: "\f004";
-      font-family: "Font Awesome 5 Free";
-      font-weight: bold;
-      // a inclure dans la palette de typo
-      font-size: map-get($icons-size, cards);
-      @include position_absolute;
-      background: linear-gradient(
-        0deg,
-        $color-secondary 0%,
-        $color-primary 100%
-      );
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-      opacity: 0;
-      transition: opacity $transition-duration;
+      opacity: 1;
     }
-    &:hover {
-      &::before {
-        opacity: 0;
-      }
-      &::after {
-        opacity: 1;
-      }
-    }
+  }
 }
-// mixin for the mediaquerries 
+// mixin for the mediaquerries
 @mixin responsive($width) {
-  @media screen and (min-width:$width) {
+  @media screen and (min-width: $width) {
     @content;
-  } 
+  }
 }

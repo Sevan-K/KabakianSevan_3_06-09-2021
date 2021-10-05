@@ -8,5 +8,6 @@ body {
   font-weight: 300;
 }
 .main-wrapper {
-  font-size: clamp(1.5rem, 0.75rem + 1.5vw, 2.25rem);
+  // font-size: clamp(1.5rem, 0.75rem + 1.5vw, 2rem);
+  font-size: 1.5rem;
 }
