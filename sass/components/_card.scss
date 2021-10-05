@@ -2,7 +2,7 @@
   // the fisrt 3 are shared with dish component
   border-radius: 2rem;
   overflow: hidden;
-  background: white;
+  background: $color-bg;
   display: grid;
   grid-template-columns: 1fr 8rem;
   grid-template-rows: clamp(7rem, 7rem + 25vw, 27rem) repeat(2, 1fr);
@@ -36,6 +36,7 @@
     img {
       width: 100%;
       object-fit: cover;
+      object-position: center 60%;
       z-index: 1;
       height: clamp(7rem, 7rem + 25vw, 27rem);
     }

@@ -30,12 +30,13 @@ $entrence_nb_delay: $entrence_nb_dur * 0.2;
   border-radius: 1.5rem;
   overflow: hidden;
   // to oiptimise
-  background: white;
+  background: $color-bg;
   margin-top: 1rem;
   display: flex;
   justify-content: flex-start;
   overflow: hidden;
   width: 100%;
+  cursor: pointer;
   @include entrence;
   &__article {
     flex: 1;
@@ -43,9 +44,11 @@ $entrence_nb_delay: $entrence_nb_dur * 0.2;
     white-space: nowrap;
     padding: 1rem;
     > h3 {
+      margin-bottom: 0.5rem;
+    }
+    > h3, > p {
       overflow: inherit;
       text-overflow: ellipsis;
-      margin-bottom: 0.5rem;
     }
   }
   &__price {
@@ -70,7 +73,8 @@ $entrence_nb_delay: $entrence_nb_dur * 0.2;
       @include fontawesome(bold);
       font-size: map-get($map: $icons-size, $key: steps);
       transform: rotate(90deg);
-      transition: all $dish-anim-dur - $dish-rot-delay 2*$dish-rot-delay ease-out;
+      transition: all $dish-anim-dur - $dish-rot-delay 2 * $dish-rot-delay
+        ease-out;
     }
   }
   &:hover {
