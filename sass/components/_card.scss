@@ -12,6 +12,8 @@
     "txt aside";
   // mixin ??
   box-shadow: 0.75rem 0.75rem 1.5rem change-bg-color(color-text-light);
+  width: 100%;
+  max-width: 65rem;
   &--new::before {
     grid-area: img;
     justify-self: right;
@@ -33,12 +35,24 @@
   &__img {
     grid-area: img;
     overflow: hidden;
+    position: relative;
     img {
       width: 100%;
       object-fit: cover;
       object-position: center 60%;
       z-index: 1;
       height: clamp(7rem, 7rem + 25vw, 27rem);
+    }
+    &::after {
+      content: "";
+      @include position_absolute;
+      background: radial-gradient(
+        circle,
+        transparent 0%,
+        rgba(2, 0, 36, 1) 100%
+      );
+      opacity: 0;
+      transition: opacity 200ms;
     }
   }
   &__heading {
@@ -56,5 +70,10 @@
     justify-self: center;
     text-align: center;
     @include heart-styling;
+  }
+  &:hover {
+    > .card__img::after {
+      opacity: 0.15;
+    }
   }
 }

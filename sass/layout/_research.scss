@@ -11,17 +11,20 @@
       &::before {
         content: "\f3c5";
         @include fontawesome(bold);
+        // position: relative;
       }
     }
     &__input {
       // @include bg-text-color(color-text-light);
-      // width: 100%;
+      width: 18ch;
       border: none;
       background: none;
       line-height: 5rem;
       text-align: center;
+      font-weight: 700;
       &:focus-visible {
         outline: none;
       }
+      
     }
   }

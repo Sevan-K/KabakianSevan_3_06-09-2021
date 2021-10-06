@@ -53,12 +53,11 @@ body {
   border-radius: 5rem;
   min-width: 200px;
   box-shadow: 0rem 0.3rem 0.6rem #b3b3b3;
-  transition: all 200ms;
   font-size: inherit;
+  transition: all 200ms;
 }
 .btn:hover {
   box-shadow: 0rem 0.5rem 0.8rem #999999;
-  transform: scale(1.01);
 }
 
 @keyframes loading-spiner {
@@ -84,7 +83,7 @@ body {
   height: 100%;
   background: #faf7fd;
   color: #000;
-  animation: loading-disapear 750ms 2250ms forwards;
+  animation: loading-disapear 600ms 1800ms forwards;
   z-index: 10;
 }
 .loading__ball {
@@ -126,31 +125,31 @@ body {
   border-radius: 50%;
   background: #9256dc;
   opacity: 0;
-  animation: loading-spiner 750ms 4 linear;
+  animation: loading-spiner 600ms 4 linear;
 }
 .loading__ball--1::after {
   animation-delay: 0ms;
 }
 .loading__ball--2::after {
-  animation-delay: 93.75ms;
+  animation-delay: 75ms;
 }
 .loading__ball--3::after {
-  animation-delay: 187.5ms;
+  animation-delay: 150ms;
 }
 .loading__ball--4::after {
-  animation-delay: 281.25ms;
+  animation-delay: 225ms;
 }
 .loading__ball--5::after {
-  animation-delay: 375ms;
+  animation-delay: 300ms;
 }
 .loading__ball--6::after {
-  animation-delay: 468.75ms;
+  animation-delay: 375ms;
 }
 .loading__ball--7::after {
-  animation-delay: 562.5ms;
+  animation-delay: 450ms;
 }
 .loading__ball--8::after {
-  animation-delay: 656.25ms;
+  animation-delay: 525ms;
 }
 .loading__ball::before {
   content: "";
@@ -243,6 +242,8 @@ body {
   grid-template-rows: clamp(7rem, 7rem + 25vw, 27rem) repeat(2, 1fr);
   grid-template-areas: "img img" "heading aside" "txt aside";
   box-shadow: 0.75rem 0.75rem 1.5rem #e6e6e6;
+  width: 100%;
+  max-width: 65rem;
 }
 .card--new::before {
   grid-area: img;
@@ -265,6 +266,7 @@ body {
 .card__img {
   grid-area: img;
   overflow: hidden;
+  position: relative;
 }
 .card__img img {
   width: 100%;
@@ -272,6 +274,17 @@ body {
   object-position: center 60%;
   z-index: 1;
   height: clamp(7rem, 7rem + 25vw, 27rem);
+}
+.card__img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: radial-gradient(circle, transparent 0%, #020024 100%);
+  opacity: 0;
+  transition: opacity 200ms;
 }
 .card__heading {
   grid-area: heading;
@@ -319,6 +332,9 @@ body {
 }
 .card__aside:hover::after {
   opacity: 1;
+}
+.card:hover > .card__img::after {
+  opacity: 0.15;
 }
 
 @keyframes entrence {
@@ -439,7 +455,7 @@ body {
   box-shadow: 0 0 1rem #b3b3b3;
 }
 .header__logo {
-  width: 50%;
+  width: 45%;
   max-width: 300px;
 }
 .header__logo img {
@@ -479,10 +495,12 @@ body {
   font-weight: bold;
 }
 .research__input {
+  width: 18ch;
   border: none;
   background: none;
   line-height: 5rem;
   text-align: center;
+  font-weight: 700;
 }
 .research__input:focus-visible {
   outline: none;
@@ -540,10 +558,19 @@ body {
 .main-section__heading {
   width: 100%;
 }
+.main-section__link {
+  display: flex;
+  justify-content: center;
+}
 @media screen and (min-width: 680px) {
   .main-section__link {
     flex: 1 1 47%;
     max-width: 45.5vw;
+  }
+}
+@media screen and (min-width: 1650px) {
+  .main-section__link {
+    flex: 1 1 22.5%;
   }
 }
 
@@ -555,6 +582,7 @@ body {
 .footer__heading {
   font-family: "Shrikhand", sans-serif;
   margin-bottom: 1.5rem;
+  font-size: 2rem;
 }
 
 .footer-li {
@@ -571,7 +599,7 @@ body {
   font-weight: bold;
   font-size: 1.5rem;
   display: inline-block;
-  width: 7%;
+  width: 3rem;
   text-align: center;
 }
 .footer-li__link {
@@ -584,10 +612,10 @@ body {
 .restaurent-img {
   position: relative;
   width: 100%;
-  height: clamp(20rem, 10rem + 27vw, 30rem);
+  height: clamp(12rem, 6rem + 35vw, 30rem);
   z-index: -1;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 .restaurent-img img {
   width: 100%;
@@ -598,7 +626,7 @@ body {
   background: whitesmoke;
   color: #000;
   padding: 4rem 2rem 5rem 2rem;
-  border-radius: 5rem 5rem 0 0;
+  border-radius: 4.5rem 4.5rem 0 0;
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: clamp(3rem, 1rem+4vw, 6rem) repeat(3, 1fr) 10rem;
