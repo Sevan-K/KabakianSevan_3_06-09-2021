@@ -2,6 +2,7 @@
 @import "./utils/variables";
 @import "./utils/functions";
 @import "./utils/mixins";
+@import "./utils/extend";
 // imports from base
 @import "./base/base";
 @import "./base/typo";
@@ -9,7 +10,7 @@
 @import "./components/btn";
 @import "./components/loading";
 @import "./components/step";
-@import "./components/card";
+@import "./components/restaurent";
 @import "./components/disch";
 // imports from layout
 @import "./layout/header";

@@ -1,13 +1,12 @@
+// index's main section styling
 .main-section {
   @include bg-text-color(color-text-lighter);
   @include set-padding(section);
   display: flex;
   flex-direction: column;
-  // add in a variable
   gap: 3rem;
   @include responsive($breakpoint-medium) {
     flex-flow: row wrap;
-    // justify-content: space-between;
     gap: 3vw;
   }
   @include responsive($breakpoint-medium) {

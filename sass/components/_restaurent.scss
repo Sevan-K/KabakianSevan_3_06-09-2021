@@ -1,8 +1,5 @@
-.card {
-  // the fisrt 3 are shared with dish component
-  border-radius: 2rem;
-  overflow: hidden;
-  background: $color-bg;
+.restaurant {
+  @include cards-base(2rem);
   display: grid;
   grid-template-columns: 1fr 8rem;
   grid-template-rows: clamp(7rem, 7rem + 25vw, 27rem) repeat(2, 1fr);
@@ -10,9 +7,6 @@
     "img img"
     "heading aside"
     "txt aside";
-  // mixin ??
-  box-shadow: 0.75rem 0.75rem 1.5rem change-bg-color(color-text-light);
-  width: 100%;
   max-width: 65rem;
   &--new::before {
     grid-area: img;
@@ -43,6 +37,7 @@
       z-index: 1;
       height: clamp(7rem, 7rem + 25vw, 27rem);
     }
+    // invisible background by default, visible when card is hovered
     &::after {
       content: "";
       @include position_absolute;
@@ -53,6 +48,11 @@
       );
       opacity: 0;
       transition: opacity 200ms;
+    }
+  }
+  &:hover {
+    > .restaurent__img::after {
+      opacity: 0.15;
     }
   }
   &__heading {
@@ -70,10 +70,5 @@
     justify-self: center;
     text-align: center;
     @include heart-styling;
-  }
-  &:hover {
-    > .card__img::after {
-      opacity: 0.15;
-    }
   }
 }

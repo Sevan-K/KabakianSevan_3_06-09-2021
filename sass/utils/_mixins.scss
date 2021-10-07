@@ -1,3 +1,6 @@
+/*----------------------------------------*\
+Styles
+\*----------------------------------------*/
 // mixin to determine backgound color and text color of a block
 @mixin bg-text-color($bg-style: color-text-lighter) {
   $bg-color: change-bg-color($bg-style);
@@ -8,6 +11,25 @@
 @mixin set-padding($bloc-type) {
   padding: map-get($map: $padding-dimensions, $key: $bloc-type);
 }
+// mixin to set position to absolute
+@mixin position_absolute {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+// common properties to all cards (cards and dishes)
+@mixin cards-base($border-radius: 2rem) {
+  box-shadow: 0.75rem 0.75rem 1.5rem change-bg-color(color-text-light);
+  overflow: hidden;
+  background: $color-bg;
+  width: 100%;
+  border-radius: $border-radius;
+}
+/*----------------------------------------*\
+Fontawesome icons
+\*----------------------------------------*/
 // mixin for changing step__text's before content
 @mixin before-content($map) {
   @each $type, $content in $map {
@@ -21,16 +43,10 @@
   font-family: "Font Awesome 5 Free";
   font-weight: $font-weight;
 }
-
-@mixin position_absolute {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-// mixin felx ??
-
+/*----------------------------------------*\
+Animation and transition
+\*----------------------------------------*/
+// heart animation
 @mixin heart-styling {
   position: relative;
   &::before {
@@ -64,6 +80,35 @@
     }
   }
 }
+// mixin to parameter entrance animation and its delay
+@mixin entrence {
+  animation: entrence $entrence_nb_dur both;
+  @for $i from 1 through $entrence_nb {
+    &--#{$i} {
+      animation-delay: $entrence_nb_delay * $i;
+    }
+  }
+}
+// mixin to set balls' positions and scale
+@mixin ball-positions-scale {
+  @each $positions, $coordonates in $ball-positions {
+    $position: map-get(
+      $map: $ball-positions,
+      $key: $positions,
+    );
+    $X: map-get($position, X);
+    $Y: map-get($position, Y);
+    &--#{$positions} {
+      transform: translate(
+        calc(#{$X}*#{$load-size}* 2),
+        calc(#{$Y}*#{$load-size}* 2)
+      );
+    }
+  }
+}
+/*----------------------------------------*\
+Responsive design
+\*----------------------------------------*/
 // mixin for the mediaquerries
 @mixin responsive($width) {
   @media screen and (min-width: $width) {

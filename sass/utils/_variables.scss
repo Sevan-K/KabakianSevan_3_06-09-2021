@@ -1,28 +1,26 @@
-// colors definition
+/*----------------------------------------*\
+Colors definition
+\*----------------------------------------*/
 $color-primary: #9256dc;
 $color-secondary: #ff7ad9;
 $color-tertiary: #98e2cf;
 $color-text: #000;
-$color-bg:#fff;
+$color-bg: #fff;
+/*----------------------------------------*\
+Layout
+\*----------------------------------------*/
 // variable pour la taille du aside des steps
 $step__aside-size: 2.5rem;
-
-$icons-size: (
-  steps: 2rem,
-  cards: 3rem,
-  footer:1.5rem
-);
-$transition-duration: 300ms;
-
 // padding dimensions storage
-// $padding-unit:1rem; to be uses later when all padding are defined
 $padding-dimensions: (
   section: 4rem 2rem 5rem 2rem,
   section-large: 4rem 3vw 6rem 3vw,
   footer: 2rem 2rem,
   button: 1em 1.5em,
 );
-
+/*----------------------------------------*\
+Bacgrounds styles
+\*----------------------------------------*/
 // map for background lightening to be used un a mixin with a function for text color
 $bg-color-styles: (
   color-text-lighter: (
@@ -52,7 +50,15 @@ $bg-color-styles: (
   color-tertiary: (
     color: $color-tertiary,
     lighten: 0%,
-  )
+  ),
+);
+/*----------------------------------------*\
+Fontawesome icons
+\*----------------------------------------*/
+$icons-size: (
+  steps: 2rem,
+  cards: 3rem,
+  footer: 1.5rem,
 );
 // incons codes for steps
 $step-before-content: (
@@ -65,7 +71,63 @@ $footer__link-before-content: (
   utensils: "\f2e7",
   handshake: "\f4c4",
 );
+/*----------------------------------------*\
+Animation and transition
+\*----------------------------------------*/
+// général transition duration
+$transition-duration: 300ms;
+// variables for slide in animation on dish
+$dish-anim-dur: 500ms;
+$dish-rot-delay: 200ms;
+$check-side-size: 6rem;
+// variables for menu's entrence animation
+$entrence_nb: 10;
+$entrence_nb_dur: 1000ms;
+$entrence_nb_delay: $entrence_nb_dur * 0.2;
+// Variable equal to the square root of 2 ==> 1.41421356237
+$sqrt-2: 1.414;
+$load-size: clamp(2rem, 2rem + 1vw, 4rem);
+$loading-dur: 600ms;
+$loading-nb: 8;
+// map to set the loading balls position
+$ball-positions: (
+  1: (
+    X: 1,
+    Y: 0,
+  ),
+  2: (
+    X: calc(1 / #{$sqrt-2}),
+    Y: calc(-1 / #{$sqrt-2}),
+  ),
+  3: (
+    X: 0,
+    Y: -1,
+  ),
+  4: (
+    X: calc(-1 / #{$sqrt-2}),
+    Y: calc(-1 / #{$sqrt-2}),
+  ),
+  5: (
+    X: -1,
+    Y: 0,
+  ),
+  6: (
+    X: calc(-1 / #{$sqrt-2}),
+    Y: calc(1 / #{$sqrt-2}),
+  ),
+  7: (
+    X: 0,
+    Y: 1,
+  ),
+  8: (
+    X: calc(1 / #{$sqrt-2}),
+    Y: calc(1 / #{$sqrt-2}),
+  ),
+);
+/*----------------------------------------*\
+Responsive design
+\*----------------------------------------*/
 // breakpoints
-$breakpoint-medium:680px;
-$breakpoint-big:1024px;
-$breakpoint-larger:1650px;
+$breakpoint-medium: 680px;
+$breakpoint-big: 1024px;
+$breakpoint-larger: 1650px;

@@ -27,9 +27,3 @@ ul {
 button {
   border: none;
 }
-.main-wrapper {
-  @include responsive($breakpoint-big){
-    // max-width: $breakpoint-big;
-    margin: auto;
-  }
-}

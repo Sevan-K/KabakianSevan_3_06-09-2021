@@ -1,8 +1,4 @@
-// to move in variable
-$dish-anim-dur: 500ms;
-$dish-rot-delay: 200ms;
-$check-side-size: 6rem;
-
+// animation for dishes entrence
 @keyframes entrence {
   from {
     opacity: 0;
@@ -13,29 +9,12 @@ $check-side-size: 6rem;
     transform: translateY(0);
   }
 }
-$entrence_nb: 10;
-$entrence_nb_dur: 1000ms;
-$entrence_nb_delay: $entrence_nb_dur * 0.2;
-@mixin entrence {
-  animation: entrence $entrence_nb_dur both;
-  @for $i from 1 through $entrence_nb {
-    &--#{$i} {
-      animation-delay: $entrence_nb_delay * $i;
-    }
-  }
-}
-
 // dish styling
 .dish {
-  border-radius: 1.5rem;
-  overflow: hidden;
-  // to oiptimise
-  background: $color-bg;
-  margin-top: 1rem;
+  @include cards-base(1.5rem);
+  margin-top: 1.5rem;
   display: flex;
   justify-content: flex-start;
-  overflow: hidden;
-  width: 100%;
   cursor: pointer;
   @include entrence;
   &__article {
@@ -45,20 +24,20 @@ $entrence_nb_delay: $entrence_nb_dur * 0.2;
     padding: 1rem;
     > h3 {
       margin-bottom: 0.5rem;
+      @extend %hide-mode;
     }
-    > h3, > p {
-      overflow: inherit;
-      text-overflow: ellipsis;
+    > p {
+     @extend %hide-mode;
     }
   }
   &__price {
     display: flex;
-    // width: $check-side-size;
     justify-content: flex-start;
     align-items: flex-end;
     padding: 1rem;
     font-weight: bold;
   }
+  // aside is not visible by default and appear when dish is hovered
   &__aside {
     display: flex;
     justify-content: center;

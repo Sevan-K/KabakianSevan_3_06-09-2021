@@ -1,62 +1,4 @@
-// Variable equal to the square root of 2 ==> 1.41421356237
-$sqrt-2: 1.414;
-$load-size: clamp(2rem, 2rem + 1vw, 4rem);
-$loading-dur: 600ms;
-$loading-nb: 8;
-
-$ball-positions: (
-  1: (
-    X: 1,
-    Y: 0,
-  ),
-  2: (
-    X: calc(1 / #{$sqrt-2}),
-    Y: calc(-1 / #{$sqrt-2}),
-  ),
-  3: (
-    X: 0,
-    Y: -1,
-  ),
-  4: (
-    X: calc(-1 / #{$sqrt-2}),
-    Y: calc(-1 / #{$sqrt-2}),
-  ),
-  5: (
-    X: -1,
-    Y: 0,
-  ),
-  6: (
-    X: calc(-1 / #{$sqrt-2}),
-    Y: calc(1 / #{$sqrt-2}),
-  ),
-  7: (
-    X: 0,
-    Y: 1,
-  ),
-  8: (
-    X: calc(1 / #{$sqrt-2}),
-    Y: calc(1 / #{$sqrt-2}),
-  ),
-);
-
-// mixin to set balls' positions and scale
-@mixin ball-positions-scale {
-  @each $positions, $coordonates in $ball-positions {
-    $position: map-get(
-      $map: $ball-positions,
-      $key: $positions,
-    );
-    $X: map-get($position, X);
-    $Y: map-get($position, Y);
-    &--#{$positions} {
-      transform: translate(
-        calc(#{$X}*#{$load-size}* 2),
-        calc(#{$Y}*#{$load-size}* 2)
-      );
-    }
-  }
-}
-
+// animation fo the loader to spin
 @keyframes loading-spiner {
   from {
     opacity: 1;
@@ -65,13 +7,13 @@ $ball-positions: (
     opacity: 0;
   }
 }
+// animation for the loader to disapear
 @keyframes loading-disapear {
   to {
     opacity: 0;
     z-index: -1;
   }
 }
-
 .loading {
   position: fixed;
   display: flex;

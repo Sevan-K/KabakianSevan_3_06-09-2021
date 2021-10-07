@@ -6,21 +6,22 @@
     margin-bottom: 1.5rem;
     font-size: 2rem;
   }
-}
-.footer-li {
-  margin-bottom: 0.75rem;
-  @include before-content($footer__link-before-content);
-  &--icon::before {
-    @include fontawesome;
-    font-size: map-get($map: $icons-size, $key: footer);
-    display: inline-block;
-    width: 3rem;
-    text-align: center;
-  }
-  &__link {
-    color: inherit;
-    &:hover {
-      text-decoration: underline;
+  // footer's list items styling
+  &-li {
+    margin-bottom: 0.75rem;
+    @include before-content($footer__link-before-content);
+    &--icon::before {
+      @include fontawesome;
+      font-size: map-get($map: $icons-size, $key: footer);
+      display: inline-block;
+      width: 3rem;
+      text-align: center;
+    }
+    &__link {
+      color: inherit;
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }

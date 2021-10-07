@@ -11,11 +11,9 @@
       &::before {
         content: "\f3c5";
         @include fontawesome(bold);
-        // position: relative;
       }
     }
     &__input {
-      // @include bg-text-color(color-text-light);
       width: 18ch;
       border: none;
       background: none;
@@ -25,6 +23,5 @@
       &:focus-visible {
         outline: none;
       }
-      
     }
   }

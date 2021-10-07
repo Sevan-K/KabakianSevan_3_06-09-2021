@@ -1,3 +1,4 @@
+// placing restaurent's image
 .restaurent-img {
   position: relative;
   width: 100%;
@@ -5,11 +6,15 @@
   z-index: -1;
   display: flex;
   align-items: flex-start;
+  @include responsive($breakpoint-medium) {
+    align-items: center;
+  }
   img {
     width: 100%;
     object-fit: cover;
   }
 }
+// menu styling
 .menu {
   @include bg-text-color(color-text-lighter);
   @include set-padding(section);
@@ -43,13 +48,13 @@
       font-weight: 100;
       font-size: clamp(2.2rem, 1.25rem + 3.25vw, 4rem);
     }
+    // part to include the heart and its animation
     &--heart {
       display: flex;
       padding-right: 10%;
       @include heart-styling;
     }
   }
-  // part to include the heart and its animation
   &__section {
     @for $i from 1 through 3 {
       &--#{$i} {
