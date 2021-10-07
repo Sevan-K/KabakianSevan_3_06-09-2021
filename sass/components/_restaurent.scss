@@ -47,11 +47,11 @@
         rgba(2, 0, 36, 1) 100%
       );
       opacity: 0;
-      transition: opacity 200ms;
+      transition: opacity $transition-duration;
     }
   }
   &:hover {
-    > .restaurent__img::after {
+    > .restaurant__img::after {
       opacity: 0.15;
     }
   }

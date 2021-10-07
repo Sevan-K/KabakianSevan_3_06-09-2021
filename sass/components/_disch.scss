@@ -27,7 +27,7 @@
       @extend %hide-mode;
     }
     > p {
-     @extend %hide-mode;
+      @extend %hide-mode;
     }
   }
   &__price {
@@ -50,7 +50,7 @@
     &::after {
       content: "\f058";
       @include fontawesome(bold);
-      font-size: map-get($map: $icons-size, $key: steps);
+      @include icon-size(steps);
       transform: rotate(90deg);
       transition: all $dish-anim-dur - $dish-rot-delay 2 * $dish-rot-delay
         ease-out;

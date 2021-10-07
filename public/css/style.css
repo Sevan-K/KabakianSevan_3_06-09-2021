@@ -244,6 +244,7 @@ body {
   left: 0;
   z-index: -1;
   opacity: 0;
+  transition: opacity 200ms;
 }
 .step__text::before {
   flex: 1 1 30%;
@@ -253,6 +254,7 @@ body {
   font-weight: bold;
   color: gray;
   font-size: 2rem;
+  transition: opacity 200ms;
 }
 .step__text:hover::after {
   opacity: 1;
@@ -314,7 +316,7 @@ body {
   opacity: 0;
   transition: opacity 200ms;
 }
-.restaurant:hover > .restaurent__img::after {
+.restaurant:hover > .restaurant__img::after {
   opacity: 0.15;
 }
 .restaurant__heading {
@@ -339,7 +341,7 @@ body {
   font-weight: normal;
   font-size: 3rem;
   opacity: 1;
-  transition: opacity 300ms;
+  transition: opacity 400ms;
 }
 .restaurant__aside::after {
   content: "\f004";
@@ -356,7 +358,7 @@ body {
   -webkit-background-clip: text;
   color: transparent;
   opacity: 0;
-  transition: opacity 300ms;
+  transition: opacity 400ms;
 }
 .restaurant__aside:hover::before {
   opacity: 0;
@@ -620,7 +622,6 @@ body {
 .footer-li--icon::before {
   font-family: "Font Awesome 5 Free";
   font-weight: bold;
-  font-size: 1.5rem;
   display: inline-block;
   width: 3rem;
   text-align: center;
@@ -691,7 +692,7 @@ body {
   font-weight: normal;
   font-size: 3rem;
   opacity: 1;
-  transition: opacity 300ms;
+  transition: opacity 400ms;
 }
 .menu__heading--heart::after {
   content: "\f004";
@@ -708,7 +709,7 @@ body {
   -webkit-background-clip: text;
   color: transparent;
   opacity: 0;
-  transition: opacity 300ms;
+  transition: opacity 400ms;
 }
 .menu__heading--heart:hover::before {
   opacity: 0;

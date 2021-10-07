@@ -43,6 +43,10 @@ Fontawesome icons
   font-family: "Font Awesome 5 Free";
   font-weight: $font-weight;
 }
+// mixin to set icon size
+@mixin icon-size($icon-from) {
+  font-size: map-get($icons-size, $icon-from);
+}
 /*----------------------------------------*\
 Animation and transition
 \*----------------------------------------*/
@@ -53,23 +57,23 @@ Animation and transition
     content: "\f004";
     @include fontawesome(normal);
     // a inclure dans la palette de typo
-    font-size: map-get($icons-size, cards);
+    @include icon-size(cards);
     opacity: 1;
     // faire une mixin couplée à une map ?
-    transition: opacity $transition-duration;
+    transition: opacity $transition-duration * 2;
   }
   &::after {
     content: "\f004";
     @include fontawesome(bold);
     // a inclure dans la palette de typo
-    font-size: map-get($icons-size, cards);
+    @include icon-size(cards);
     @include position_absolute;
     background: linear-gradient(0deg, $color-secondary 0%, $color-primary 100%);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
     opacity: 0;
-    transition: opacity $transition-duration;
+    transition: opacity $transition-duration * 2;
   }
   &:hover {
     &::before {

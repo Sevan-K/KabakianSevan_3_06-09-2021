@@ -37,7 +37,7 @@
       color: $color-text;
     }
     &:hover {
-      animation: arrow-side-move 100ms 2 alternate cubic-bezier(0.4, 0.1, 0.6, 0.9);
+      animation: arrow-side-move $transition-duration*0.5 2 alternate cubic-bezier(0.4, 0.1, 0.6, 0.9);
     }
   }
 }

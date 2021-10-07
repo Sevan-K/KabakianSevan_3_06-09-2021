@@ -12,7 +12,7 @@
     @include before-content($footer__link-before-content);
     &--icon::before {
       @include fontawesome;
-      font-size: map-get($map: $icons-size, $key: footer);
+      // @include icon-size(footer);
       display: inline-block;
       width: 3rem;
       text-align: center;

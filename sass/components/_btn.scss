@@ -6,7 +6,7 @@
   border-radius: 5rem;
   min-width: 200px;
   box-shadow: 0rem 0.3rem 0.6rem lighten($color: $color-text, $amount: 70%);
-  transition: all 200ms;
+  transition: all $transition-duration;
   &:hover {
     box-shadow: 0rem 0.5rem 0.8rem lighten($color: $color-text, $amount: 60%);
   }
