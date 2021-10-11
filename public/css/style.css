@@ -81,11 +81,29 @@ body {
   padding: 1em 1.5em;
   border-radius: 5rem;
   min-width: 200px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
   box-shadow: 0rem 0.3rem 0.6rem #b3b3b3;
-  transition: all 200ms;
+  transition: box-shadow 200ms 100ms cubic-bezier(0.47, 0, 0.75, 0.72);
+}
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(-5deg, #9256dc 0%, #ff7ad9 80%);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 200ms cubic-bezier(0.47, 0, 0.75, 0.72);
 }
 .btn:hover {
   box-shadow: 0rem 0.5rem 0.8rem #999999;
+}
+.btn:hover::after {
+  opacity: 1;
 }
 
 @keyframes loading-spiner {
@@ -233,6 +251,16 @@ body {
   flex: 1 1 70%;
   font-weight: bold;
 }
+.step__text::before {
+  flex: 1 1 30%;
+  max-width: 10rem;
+  text-align: center;
+  font-family: "Font Awesome 5 Free";
+  font-weight: bold;
+  color: gray;
+  font-size: 2rem;
+  transition: opacity 200ms;
+}
 .step__text::after {
   content: "";
   background: #f1eafb;
@@ -244,16 +272,6 @@ body {
   left: 0;
   z-index: -1;
   opacity: 0;
-  transition: opacity 200ms;
-}
-.step__text::before {
-  flex: 1 1 30%;
-  max-width: 10rem;
-  text-align: center;
-  font-family: "Font Awesome 5 Free";
-  font-weight: bold;
-  color: gray;
-  font-size: 2rem;
   transition: opacity 200ms;
 }
 .step__text:hover::after {
@@ -658,14 +676,14 @@ body {
   border-radius: 4.5rem 4.5rem 0 0;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: clamp(3rem, 1rem+4vw, 6rem) repeat(3, 1fr) 10rem;
+  grid-template-rows: clamp(3rem, 1rem + 4vw, 6rem) repeat(3, 1fr) 10rem;
   grid-template-areas: "heading " "dishes--1" "dishes--2" "dishes--3" "btn";
   grid-row-gap: 3rem;
 }
 @media screen and (min-width: 1024px) {
   .menu {
     grid-template-columns: repeat(3, 30vw);
-    grid-template-rows: clamp(3rem, 1rem+4vw, 6rem) 1fr 10rem;
+    grid-template-rows: clamp(3rem, 1rem + 4vw, 6rem) 1fr 10rem;
     grid-template-areas: "heading heading heading" "dishes--1 dishes--2 dishes--3" "btn btn btn";
     grid-column-gap: 3vw;
   }

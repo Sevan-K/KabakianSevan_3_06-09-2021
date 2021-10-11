@@ -5,9 +5,24 @@
   @include set-padding(button);
   border-radius: 5rem;
   min-width: 200px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
   box-shadow: 0rem 0.3rem 0.6rem lighten($color: $color-text, $amount: 70%);
-  transition: all $transition-duration;
+  transition: box-shadow $transition-duration $transition-duration*0.5 cubic-bezier(0.47, 0, 0.75, 0.72);
+  //after for changing the background color when btn is hovered
+  &::after {
+    content: "";
+    @include position_absolute;
+    background: linear-gradient(-5deg, $color-primary 0%, $color-secondary 80%);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity $transition-duration cubic-bezier(0.47, 0, 0.75, 0.72);
+  }
   &:hover {
     box-shadow: 0rem 0.5rem 0.8rem lighten($color: $color-text, $amount: 60%);
+    &::after {
+      opacity: 1;
+    }
   }
 }

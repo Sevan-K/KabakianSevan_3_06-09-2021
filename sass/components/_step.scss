@@ -32,16 +32,6 @@
       flex: 1 1 70%;
       font-weight: bold;
     }
-    // pseudo element for background change
-    &::after {
-      content: "";
-      @include bg-text-color(color-primary-light);
-      // mixin pour position absolute
-      @include position_absolute;
-      z-index: -1;
-      opacity: 0;
-      transition: opacity $transition-duration;
-    }
     // pseudo element for the icon
     &::before {
       flex: 1 1 30%;
@@ -52,7 +42,17 @@
       color: lighten($color-text, 50%);
       @include icon-size(steps);
       transition: opacity $transition-duration;
+    }// pseudo element for background change
+    &::after {
+      content: "";
+      @include bg-text-color(color-primary-light);
+      // mixin pour position absolute
+      @include position_absolute;
+      z-index: -1;
+      opacity: 0;
+      transition: opacity $transition-duration;
     }
+    
     &:hover {
       &::after {
         opacity: 1;

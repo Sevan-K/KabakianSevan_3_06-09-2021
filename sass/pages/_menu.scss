@@ -21,7 +21,7 @@
   border-radius: 4.5rem 4.5rem 0 0;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: clamp(3rem, 1rem+4vw, 6rem) repeat(3, 1fr) 10rem;
+  grid-template-rows: clamp(3rem, 1rem + 4vw, 6rem) repeat(3, 1fr) 10rem;
   grid-template-areas:
     "heading "
     "dishes--1"
@@ -31,7 +31,7 @@
   grid-row-gap: 3rem;
   @include responsive($breakpoint-big) {
     grid-template-columns: repeat(3, 30vw);
-    grid-template-rows: clamp(3rem, 1rem+4vw, 6rem) 1fr 10rem;
+    grid-template-rows: clamp(3rem, 1rem + 4vw, 6rem) 1fr 10rem;
     grid-template-areas:
       "heading heading heading"
       "dishes--1 dishes--2 dishes--3"
