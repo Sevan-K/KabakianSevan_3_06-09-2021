@@ -1,4 +1,4 @@
-// placing restaurent's image
+/* placing restaurent's image in menu pages */
 .restaurent-img {
   position: relative;
   width: 100%;
@@ -14,7 +14,7 @@
     object-fit: cover;
   }
 }
-// menu styling
+/* menus'page menu styling */
 .menu {
   @include bg-text-color(color-text-lighter);
   @include set-padding(section);
@@ -48,7 +48,7 @@
       font-weight: 100;
       font-size: clamp(2.2rem, 1.25rem + 3.25vw, 4rem);
     }
-    // part to include the heart and its animation
+    /* code for the likeable heart */
     &--heart {
       display: flex;
       padding-right: 10%;

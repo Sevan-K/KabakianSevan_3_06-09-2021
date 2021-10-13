@@ -1,4 +1,4 @@
-// animation for dishes entrence
+/* animation for dishes entrence */
 @keyframes entrence {
   from {
     opacity: 0;
@@ -9,7 +9,7 @@
     transform: translateY(0);
   }
 }
-// dish styling
+/* dish cards styling */
 .dish {
   @include cards-base(1.5rem);
   margin-top: 1.5rem;
@@ -24,10 +24,11 @@
     padding: 1rem;
     > h3 {
       margin-bottom: 0.5rem;
-      @extend %hide-mode;
     }
+    > h3,
     > p {
-      @extend %hide-mode;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
   &__price {
@@ -37,7 +38,7 @@
     padding: 1rem;
     font-weight: bold;
   }
-  // aside is not visible by default and appear when dish is hovered
+  /* aside is not visible by default and appear when dish is hovered */
   &__aside {
     display: flex;
     justify-content: center;

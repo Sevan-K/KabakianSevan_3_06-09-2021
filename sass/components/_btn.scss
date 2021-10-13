@@ -1,3 +1,4 @@
+/* btn element styling */
 .btn {
   background: linear-gradient(-5deg, $color-primary 0%, $color-secondary 100%);
   color: $color-bg;
@@ -10,7 +11,7 @@
   overflow: hidden;
   box-shadow: 0rem 0.3rem 0.6rem lighten($color: $color-text, $amount: 70%);
   transition: box-shadow $transition-duration $transition-duration*0.5 cubic-bezier(0.47, 0, 0.75, 0.72);
-  //after for changing the background color when btn is hovered
+  /*after for changing the background color when btn is hovered */
   &::after {
     content: "";
     @include position_absolute;

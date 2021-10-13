@@ -1,4 +1,4 @@
-// animation fo the loader to spin
+/* animation fo the loader to spin */
 @keyframes loading-spiner {
   from {
     opacity: 1;
@@ -7,13 +7,14 @@
     opacity: 0;
   }
 }
-// animation for the loader to disapear
+/* animation for the loader to disapear */
 @keyframes loading-disapear {
   to {
     opacity: 0;
     z-index: -1;
   }
 }
+/* loading spinner styling */
 .loading {
   position: fixed;
   display: flex;
@@ -22,7 +23,7 @@
   width: 100%;
   height: 100%;
   @include bg-text-color(color-primary-lighter);
-  animation: loading-disapear $loading-dur 3*$loading-dur  forwards;
+  animation: loading-disapear $loading-dur 3 * $loading-dur forwards;
   z-index: 10;
   &__ball {
     position: fixed;
@@ -43,7 +44,7 @@
     }
     @for $i from 1 through $loading-nb {
       &--#{$i}::after {
-        $j:-1+$i;
+        $j: -1 + $i;
         animation-delay: $j * $loading-dur/$loading-nb;
       }
     }

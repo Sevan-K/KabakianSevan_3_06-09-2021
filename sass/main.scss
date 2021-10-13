@@ -2,10 +2,10 @@
 @import "./utils/variables";
 @import "./utils/functions";
 @import "./utils/mixins";
-@import "./utils/extend";
+// @import "./utils/extend";
 // imports from base
-@import "./base/base";
 @import "./base/typo";
+@import "./base/base";
 // imports from components
 @import "./components/btn";
 @import "./components/loading";

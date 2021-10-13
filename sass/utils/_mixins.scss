@@ -1,6 +1,4 @@
-/*----------------------------------------*\
-Styles
-\*----------------------------------------*/
+//------------- Styles
 // mixin to determine backgound color and text color of a block
 @mixin bg-text-color($bg-style: color-text-lighter) {
   $bg-color: change-bg-color($bg-style);
@@ -27,9 +25,7 @@ Styles
   width: 100%;
   border-radius: $border-radius;
 }
-/*----------------------------------------*\
-Fontawesome icons
-\*----------------------------------------*/
+//------------- Fontawesome icons
 // mixin for changing step__text's before content
 @mixin before-content($map) {
   @each $type, $content in $map {
@@ -47,25 +43,20 @@ Fontawesome icons
 @mixin icon-size($icon-from) {
   font-size: map-get($icons-size, $icon-from);
 }
-/*----------------------------------------*\
-Animation and transition
-\*----------------------------------------*/
+//------------- Animation and transition
 // heart animation
 @mixin heart-styling {
   position: relative;
   &::before {
     content: "\f004";
     @include fontawesome(normal);
-    // a inclure dans la palette de typo
     @include icon-size(cards);
     opacity: 1;
-    // faire une mixin couplée à une map ?
     transition: opacity $transition-duration * 2;
   }
   &::after {
     content: "\f004";
     @include fontawesome(bold);
-    // a inclure dans la palette de typo
     @include icon-size(cards);
     @include position_absolute;
     background: linear-gradient(0deg, $color-secondary 0%, $color-primary 100%);
@@ -110,9 +101,7 @@ Animation and transition
     }
   }
 }
-/*----------------------------------------*\
-Responsive design
-\*----------------------------------------*/
+//------------- Responsive design
 // mixin for the mediaquerries
 @mixin responsive($width) {
   @media screen and (min-width: $width) {
