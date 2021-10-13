@@ -1,3 +1,4 @@
+/* fonctionnment steps styling */
 .step {
   margin: 2rem 0;
   display: grid;
@@ -32,7 +33,7 @@
       flex: 1 1 70%;
       font-weight: bold;
     }
-    // pseudo element for the icon
+    /* pseudo element for the icon */
     &::before {
       flex: 1 1 30%;
       max-width: 10rem;
@@ -42,7 +43,8 @@
       color: lighten($color-text, 50%);
       @include icon-size(steps);
       transition: opacity $transition-duration;
-    }// pseudo element for background change
+    }
+    /* pseudo element for background change */
     &::after {
       content: "";
       @include bg-text-color(color-primary-light);
@@ -52,7 +54,6 @@
       opacity: 0;
       transition: opacity $transition-duration;
     }
-    
     &:hover {
       &::after {
         opacity: 1;

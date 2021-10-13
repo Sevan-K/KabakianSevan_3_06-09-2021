@@ -1,4 +1,4 @@
-// removing all default margin and padding
+/* removing all default margin and padding */
 *,
 *::after,
 *::before {
@@ -11,16 +11,16 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
-// changing box-sizing
+/* changing box-sizing */ 
 body {
   box-sizing: border-box;
 }
-// removing default ancre styling
+/* removing default ancre styling */ 
 a {
   text-decoration: none;
   color: $color-text;
 }
-// setting ul list style
+/* setting ul list style */ 
 ul {
   list-style: none;
 }

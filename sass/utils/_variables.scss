@@ -1,14 +1,10 @@
-/*----------------------------------------*\
-Colors definition
-\*----------------------------------------*/
+// ------------- Colors definition
 $color-primary: #9256dc;
 $color-secondary: #ff7ad9;
 $color-tertiary: #98e2cf;
 $color-text: #000;
 $color-bg: #fff;
-/*----------------------------------------*\
-Layout
-\*----------------------------------------*/
+//------------- Layout
 // variable pour la taille du aside des steps
 $step__aside-size: 2.5rem;
 // padding dimensions storage
@@ -18,9 +14,7 @@ $padding-dimensions: (
   footer: 2rem 2rem,
   button: 1em 1.5em,
 );
-/*----------------------------------------*\
-Bacgrounds styles
-\*----------------------------------------*/
+//------------- Bacgrounds styles
 // map for background lightening to be used un a mixin with a function for text color
 $bg-color-styles: (
   color-text-lighter: (
@@ -52,9 +46,7 @@ $bg-color-styles: (
     lighten: 0%,
   ),
 );
-/*----------------------------------------*\
-Fontawesome icons
-\*----------------------------------------*/
+//------------- Fontawesome icons
 $icons-size: (
   steps: 2rem,
   cards: 3rem,
@@ -71,9 +63,7 @@ $footer__link-before-content: (
   utensils: "\f2e7",
   handshake: "\f4c4",
 );
-/*----------------------------------------*\
-Animation and transition
-\*----------------------------------------*/
+//------------- Animation and transition
 // général transition duration
 $transition-duration: 200ms;
 // variables for slide in animation on dish
@@ -124,9 +114,7 @@ $ball-positions: (
     Y: calc(1 / #{$sqrt-2}),
   ),
 );
-/*----------------------------------------*\
-Responsive design
-\*----------------------------------------*/
+//------------- Responsive design
 // breakpoints
 $breakpoint-medium: 680px;
 $breakpoint-big: 1024px;

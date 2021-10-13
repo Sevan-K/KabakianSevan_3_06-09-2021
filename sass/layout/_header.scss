@@ -1,4 +1,4 @@
-// animation to make the arrow move when hovered on menu pages
+/* animation to make the arrow move when hovered on menu pages */
 @keyframes arrow-side-move {
   from {
     transform: translateX(-5%);
@@ -7,6 +7,7 @@
     transform: translateX(5%);
   }
 }
+/* header layout */
 .header {
   display: flex;
   justify-content: center;

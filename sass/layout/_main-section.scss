@@ -1,4 +1,4 @@
-// index's main section styling
+/* index's main section styling */
 .main-section {
   @include bg-text-color(color-text-lighter);
   @include set-padding(section);
@@ -22,7 +22,7 @@
       flex: 1 1 47%;
       max-width: 45.5vw;
     }
-    @include responsive($breakpoint-larger){
+    @include responsive($breakpoint-larger) {
       flex: 1 1 22.5%;
     }
   }

@@ -1,40 +1,17 @@
-/*----------------------------------------*\
-Colors definition
-\*----------------------------------------*/
-/*----------------------------------------*\
-Layout
-\*----------------------------------------*/
-/*----------------------------------------*\
-Bacgrounds styles
-\*----------------------------------------*/
-/*----------------------------------------*\
-Fontawesome icons
-\*----------------------------------------*/
-/*----------------------------------------*\
-Animation and transition
-\*----------------------------------------*/
-/*----------------------------------------*\
-Responsive design
-\*----------------------------------------*/
-/*----------------------------------------*\
-Styles
-\*----------------------------------------*/
-/*----------------------------------------*\
-Fontawesome icons
-\*----------------------------------------*/
-/*----------------------------------------*\
-Animation and transition
-\*----------------------------------------*/
-/*----------------------------------------*\
-Responsive design
-\*----------------------------------------*/
+/* fonts import */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-.dish__article > p, .dish__article > h3 {
-  overflow: hidden;
-  text-overflow: ellipsis;
+/* default typo of the body */
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
 }
 
+.main-wrapper {
+  font-size: 1.5rem;
+}
+
+/* removing all default margin and padding */
 *,
 *::after,
 *::before {
@@ -48,15 +25,18 @@ html {
   scroll-behavior: smooth;
 }
 
+/* changing box-sizing */
 body {
   box-sizing: border-box;
 }
 
+/* removing default ancre styling */
 a {
   text-decoration: none;
   color: #000;
 }
 
+/* setting ul list style */
 ul {
   list-style: none;
 }
@@ -65,15 +45,7 @@ button {
   border: none;
 }
 
-body {
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-}
-
-.main-wrapper {
-  font-size: 1.5rem;
-}
-
+/* btn element styling */
 .btn {
   background: linear-gradient(-5deg, #9256dc 0%, #ff7ad9 100%);
   color: #fff;
@@ -86,6 +58,7 @@ body {
   overflow: hidden;
   box-shadow: 0rem 0.3rem 0.6rem #b3b3b3;
   transition: box-shadow 200ms 100ms cubic-bezier(0.47, 0, 0.75, 0.72);
+  /*after for changing the background color when btn is hovered */
 }
 .btn::after {
   content: "";
@@ -106,6 +79,7 @@ body {
   opacity: 1;
 }
 
+/* animation fo the loader to spin */
 @keyframes loading-spiner {
   from {
     opacity: 1;
@@ -114,12 +88,14 @@ body {
     opacity: 0;
   }
 }
+/* animation for the loader to disapear */
 @keyframes loading-disapear {
   to {
     opacity: 0;
     z-index: -1;
   }
 }
+/* loading spinner styling */
 .loading {
   position: fixed;
   display: flex;
@@ -206,6 +182,7 @@ body {
   background: #98e2cf;
 }
 
+/* fonctionnment steps styling */
 .step {
   margin: 2rem 0;
   display: grid;
@@ -237,6 +214,8 @@ body {
   position: relative;
   z-index: 1;
   box-shadow: 0.5rem 0.5rem 0.75rem #e6e6e6;
+  /* pseudo element for the icon */
+  /* pseudo element for background change */
 }
 .step__text--phone::before {
   content: "\f3cd";
@@ -281,6 +260,7 @@ body {
   color: #9256dc;
 }
 
+/* restaurant cards styling */
 .restaurant {
   box-shadow: 0.75rem 0.75rem 1.5rem #e6e6e6;
   overflow: hidden;
@@ -315,6 +295,7 @@ body {
   grid-area: img;
   overflow: hidden;
   position: relative;
+  /* invisible background by default, visible when card is hovered */
 }
 .restaurant__img img {
   width: 100%;
@@ -351,6 +332,7 @@ body {
   align-self: center;
   justify-self: center;
   text-align: center;
+  /* code for the likeable heart */
   position: relative;
 }
 .restaurant__aside::before {
@@ -385,6 +367,7 @@ body {
   opacity: 1;
 }
 
+/* animation for dishes entrence */
 @keyframes entrence {
   from {
     opacity: 0;
@@ -395,6 +378,7 @@ body {
     transform: translateY(0);
   }
 }
+/* dish cards styling */
 .dish {
   box-shadow: 0.75rem 0.75rem 1.5rem #e6e6e6;
   overflow: hidden;
@@ -406,6 +390,7 @@ body {
   justify-content: flex-start;
   cursor: pointer;
   animation: entrence 1000ms both;
+  /* aside is not visible by default and appear when dish is hovered */
 }
 .dish--1 {
   animation-delay: 200ms;
@@ -446,6 +431,11 @@ body {
 .dish__article > h3 {
   margin-bottom: 0.5rem;
 }
+.dish__article > h3,
+.dish__article > p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .dish__price {
   display: flex;
   justify-content: flex-start;
@@ -479,6 +469,7 @@ body {
   transform: rotate(360deg);
 }
 
+/* animation to make the arrow move when hovered on menu pages */
 @keyframes arrow-side-move {
   from {
     transform: translateX(-5%);
@@ -487,6 +478,7 @@ body {
     transform: translateX(5%);
   }
 }
+/* header layout */
 .header {
   display: flex;
   justify-content: center;
@@ -521,6 +513,7 @@ body {
   animation: arrow-side-move 100ms 2 alternate cubic-bezier(0.4, 0.1, 0.6, 0.9);
 }
 
+/* research part layout */
 .research {
   text-align: center;
   background: #e6e6e6;
@@ -550,6 +543,7 @@ body {
   outline: none;
 }
 
+/* layout of the exploration part */
 .explorer {
   text-align: center;
   background: whitesmoke;
@@ -566,6 +560,7 @@ body {
   margin-top: 3rem;
 }
 
+/* fonctionment section layout */
 .how2do {
   padding: 4rem 2rem 5rem 2rem;
 }
@@ -580,6 +575,7 @@ body {
   }
 }
 
+/* index's main section styling */
 .main-section {
   background: whitesmoke;
   color: #000;
@@ -618,10 +614,12 @@ body {
   }
 }
 
+/* footer layout */
 .footer {
   background: #333333;
   color: white;
   padding: 2rem 2rem;
+  /* footer's list items styling */
 }
 .footer__heading {
   font-family: "Shrikhand", sans-serif;
@@ -651,6 +649,7 @@ body {
   text-decoration: underline;
 }
 
+/* placing restaurent's image in menu pages */
 .restaurent-img {
   position: relative;
   width: 100%;
@@ -669,6 +668,7 @@ body {
   object-fit: cover;
 }
 
+/* menus'page menu styling */
 .menu {
   background: whitesmoke;
   color: #000;
@@ -693,6 +693,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* code for the likeable heart */
 }
 .menu__heading--text {
   font-family: "Shrikhand", sans-serif;

@@ -1,3 +1,4 @@
+/* restaurant cards styling */
 .restaurant {
   @include cards-base(2rem);
   display: grid;
@@ -37,7 +38,7 @@
       z-index: 1;
       height: clamp(7rem, 7rem + 25vw, 27rem);
     }
-    // invisible background by default, visible when card is hovered
+    /* invisible background by default, visible when card is hovered */
     &::after {
       content: "";
       @include position_absolute;
@@ -69,6 +70,7 @@
     align-self: center;
     justify-self: center;
     text-align: center;
+    /* code for the likeable heart */
     @include heart-styling;
   }
 }
